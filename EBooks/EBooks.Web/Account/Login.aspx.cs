@@ -21,9 +21,8 @@ namespace EBooks.Web.Account
         {
             if (Membership.ValidateUser(UserName.Text, Password.Text))
             {
+                FormsAuthentication.SetAuthCookie(UserName.Text, true);
                 HttpContext.Current.User = new GenericPrincipal(new GenericIdentity(UserName.Text), null);
-                this.ErrorMessage.Visible = true;
-                this.FailureText.Text = Page.User.Identity.IsAuthenticated.ToString();
             }
             else
             {
