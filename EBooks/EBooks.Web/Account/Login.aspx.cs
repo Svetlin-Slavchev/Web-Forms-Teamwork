@@ -31,7 +31,7 @@ namespace EBooks.Web.Account
             }
             else
             {
-                this.ErrorMessage.Text = "Login Error";
+                this.FailureText.Text= "Login Error";
             }
         }
     }
