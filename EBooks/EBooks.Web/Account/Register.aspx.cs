@@ -1,13 +1,8 @@
-﻿using System;
+﻿using EBooks.Web.Factories;
+using System;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Owin;
-using EBooks.Web.Models;
 using System.Web.Security;
-using EBooks.Web.Factories;
+using System.Web.UI;
 
 namespace EBooks.Web.Account
 {
@@ -16,21 +11,23 @@ namespace EBooks.Web.Account
         protected void CreateUser_Click(object sender, EventArgs e)
         {
             var userName = this.UserName.Text;
+
+            // check if user name exist
             var existingUsers = UserModelFactory.GetAllUsers();
             if (existingUsers.FirstOrDefault(u => u.UserName == userName) != null)
             {
                 this.ErrorMessage.Text = "Username is already exists!";
                 return;
             }
+
             var password = this.Password.Text;
-            var confirmPassword = this.ConfirmPassword.Text;
-            if (password!=confirmPassword)
-            {
-                this.ErrorMessage.Text = "Passwords do not match!";
-                return;
-            }
-            var email=this.Email.Text;
+            var email = this.Email.Text;
+
+            // create new user
             Membership.CreateUser(userName, password, email);
+
+            // redirect to login page
+            FormsAuthentication.RedirectFromLoginPage(userName, false);
         }
     }
 }

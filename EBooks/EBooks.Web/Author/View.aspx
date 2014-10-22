@@ -16,7 +16,7 @@
             <!-- This will be grid with all books in directory -->
             <asp:GridView ID="BooksByAuthorGridView" runat="server" AutoGenerateColumns="false">
                 <Columns>
-                    <asp:HyperLinkField DataNavigateUrlFormatString="View.aspx?bookId={0}"
+                    <asp:HyperLinkField DataNavigateUrlFormatString="~/Book/View.aspx?bookId={0}"
                          DataNavigateUrlFields="Id" HeaderText="Book Name" DataTextField="Title" />
                 </Columns>
             </asp:GridView>
