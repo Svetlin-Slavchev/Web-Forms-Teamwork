@@ -73,7 +73,8 @@ namespace EBooks.Web
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
-            Context.GetOwinContext().Authentication.SignOut();
+            FormsAuthentication.SignOut();
+            HttpContext.Current.User = new GenericPrincipal(new GenericIdentity(string.Empty), null);
         }
     }
 
