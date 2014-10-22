@@ -23,6 +23,7 @@
             </div>
             
             <div>
+                <span>Download here: </span>
                 <asp:HyperLink ID="DownloadLink" runat="server"></asp:HyperLink>
             </div>
         </div>
