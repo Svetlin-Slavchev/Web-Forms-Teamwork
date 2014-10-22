@@ -420,6 +420,7 @@
     </Compile>
     <Compile Include="Factories\BookModelFactory.cs" />
     <Compile Include="Factories\CategoryModelFactory.cs" />
+    <Compile Include="Factories\UserModelFactory.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

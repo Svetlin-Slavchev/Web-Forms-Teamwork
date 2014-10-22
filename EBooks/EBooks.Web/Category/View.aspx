@@ -11,10 +11,14 @@
             <h2>
                 <asp:Label ID="CategoryName" runat="server"></asp:Label>
             </h2>
-            <p>Ala bala portokala</p>
 
             <!-- This will be grid with all books in directory -->
-            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+            <asp:GridView ID="BooksByCategoryGridView" runat="server" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:HyperLinkField DataNavigateUrlFormatString="View.aspx?bookId={0}"
+                         DataNavigateUrlFields="Id" HeaderText="Book Name" DataTextField="Title" />
+                </Columns>
+            </asp:GridView>
         </div>
     </div>
 </asp:Content>
