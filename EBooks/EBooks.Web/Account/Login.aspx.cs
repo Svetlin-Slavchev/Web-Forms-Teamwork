@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using EBooks.Web.Models;
 using System.Web.Security;
+using System.Security.Principal;
 
 namespace EBooks.Web.Account
 {
@@ -13,25 +14,21 @@ namespace EBooks.Web.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void LogIn(object sender, EventArgs e)
         {
-            if (Membership.ValidateUser(this.UserName.Text, this.Password.Text))
+            if (Membership.ValidateUser(UserName.Text, Password.Text))
             {
-                if (this.RememberMe.Checked)
-                {
-                    FormsAuthentication.RedirectFromLoginPage(this.UserName.Text, true);
-                }
-                else
-                {
-                    FormsAuthentication.RedirectFromLoginPage(this.UserName.Text, false);
-                }
+                HttpContext.Current.User = new GenericPrincipal(new GenericIdentity(UserName.Text), null);
+                this.ErrorMessage.Visible = true;
+                this.FailureText.Text = Page.User.Identity.IsAuthenticated.ToString();
             }
             else
             {
-                this.FailureText.Text = "Login Error";
+                this.FailureText.Text = "Incorrect username or password";
+                this.ErrorMessage.Visible = true;
             }
         }
     }
