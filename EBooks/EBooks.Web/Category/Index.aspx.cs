@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EBooks.Web.Factories;
+using EBooks.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,10 @@ namespace EBooks.Web.Category
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            List<CategoryModel> categories = CategoryModelFactory.GetAll();
 
+            this.CategoriesGridView.DataSource = categories;
+            this.CategoriesGridView.DataBind();
         }
     }
 }

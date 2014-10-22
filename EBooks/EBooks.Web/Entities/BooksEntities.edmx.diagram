@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="676d6043603043509f90644daa2ff0a9" Name="Diagram1">
+        <EntityTypeShape EntityType="EBooksModel.aspnet_Applications" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.aspnet_Membership" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.aspnet_Paths" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.aspnet_PersonalizationAllUsers" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.aspnet_PersonalizationPerUser" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.aspnet_Profile" Width="1.5" PointX="10.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.aspnet_Roles" Width="1.5" PointX="3" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.aspnet_SchemaVersions" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.aspnet_Users" Width="1.5" PointX="8.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.aspnet_WebEvent_Events" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.Author" Width="1.5" PointX="11.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.Book" Width="1.5" PointX="13.5" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.Books_Users_Rating" Width="1.5" PointX="15.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.Category" Width="1.5" PointX="11.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.Comment" Width="1.5" PointX="15.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.Publisher" Width="1.5" PointX="11.25" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.sysdiagram" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.vw_aspnet_Applications" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.vw_aspnet_MembershipUsers" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.vw_aspnet_Profiles" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.vw_aspnet_Roles" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.vw_aspnet_Users" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.vw_aspnet_UsersInRoles" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.vw_aspnet_WebPartState_Paths" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.vw_aspnet_WebPartState_Shared" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBooksModel.vw_aspnet_WebPartState_User" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Me__Appli__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Pa__Appli__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Ro__Appli__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Us__Appli__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Me__UserI__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Pe__PathI__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Pe__PathI__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Pe__UserI__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Pr__UserI__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK_Books_aspnet_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK_Books_Users_Rating_aspnet_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK_Comments_aspnet_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK_Books_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK_Books_Publishers" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK_Books_Users_Rating_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK_Comments_Books" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.aspnet_UsersInRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.Books_Authors" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

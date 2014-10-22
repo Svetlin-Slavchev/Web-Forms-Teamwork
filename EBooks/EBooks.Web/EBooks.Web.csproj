@@ -44,6 +44,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -171,6 +173,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <EntityDeploy Include="Entities\BooksEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BooksEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Entities\BooksEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BooksEntities.edmx</DependentUpon>
+      <LastGenOutput>BooksEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\BooksEntities.edmx.diagram">
+      <DependentUpon>BooksEntities.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entities\BooksEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BooksEntities.edmx</DependentUpon>
+      <LastGenOutput>BooksEntities.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Profille\Edit.aspx" />
     <Content Include="Profille\View.aspx" />
@@ -306,6 +325,99 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Entities\aspnet_Applications.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\aspnet_Membership.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\aspnet_Paths.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\aspnet_PersonalizationAllUsers.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\aspnet_PersonalizationPerUser.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\aspnet_Profile.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\aspnet_Roles.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\aspnet_SchemaVersions.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\aspnet_Users.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\aspnet_WebEvent_Events.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Author.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Book.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BooksEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BooksEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BooksEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\BooksEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BooksEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Books_Users_Rating.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Category.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Comment.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Publisher.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sysdiagram.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vw_aspnet_Applications.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vw_aspnet_MembershipUsers.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vw_aspnet_Profiles.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vw_aspnet_Roles.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vw_aspnet_Users.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vw_aspnet_UsersInRoles.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vw_aspnet_WebPartState_Paths.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vw_aspnet_WebPartState_Shared.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\vw_aspnet_WebPartState_User.cs">
+      <DependentUpon>BooksEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Factories\BookModelFactory.cs" />
     <Compile Include="Factories\CategoryModelFactory.cs" />
     <Compile Include="Global.asax.cs">
@@ -360,8 +472,9 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Entities\" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
