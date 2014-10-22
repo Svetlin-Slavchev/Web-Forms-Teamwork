@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using EBooks.Web.Models;
+using System.Web.Security;
 
 namespace EBooks.Web.Account
 {
@@ -13,7 +14,7 @@ namespace EBooks.Web.Account
     {
         protected void CreateUser_Click(object sender, EventArgs e)
         {
-            
+            Membership.CreateUser(this.UserName.Text, this.Password.Text, this.Email.Text);
         }
     }
 }
