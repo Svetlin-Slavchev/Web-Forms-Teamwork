@@ -21,13 +21,19 @@ namespace EBooks.Web.Account
         {
             if (Membership.ValidateUser(UserName.Text, Password.Text))
             {
-                HttpContext.Current.User = new GenericPrincipal(new GenericIdentity(UserName.Text), null);
-                this.ErrorMessage.Visible = true;
-                this.FailureText.Text = Page.User.Identity.IsAuthenticated.ToString();
+                if (this.RememberMe.Checked)
+                {
+                    // create persistent cookie
+                    FormsAuthentication.RedirectFromLoginPage(this.UserName.Text, true);
+                }
+                else
+                {
+                    FormsAuthentication.RedirectFromLoginPage(this.UserName.Text, false);
+                }
             }
             else
             {
-                this.FailureText.Text = "Incorrect username or password";
+                this.FailureText.Text = "Incorrect username or password!";
                 this.ErrorMessage.Visible = true;
             }
         }
