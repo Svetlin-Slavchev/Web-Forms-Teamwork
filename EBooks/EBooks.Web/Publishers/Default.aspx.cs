@@ -18,7 +18,7 @@ namespace EBooks.Web.Publishers
             {
                 try
                 {
-                    int selectedPublisher = int.Parse(Request["id"]);
+                    int selectedPublisher = int.Parse(Page.RouteData.Values["id"] as string);
                     var books = db.Books.Where(x => x.PublisherId == selectedPublisher);
                     this.BooksData.DataSource = books.ToList();
                     this.BooksData.DataBind();

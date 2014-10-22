@@ -4,8 +4,8 @@
 
     <asp:GridView runat="server" ID="PublishersData" AutoGenerateColumns="false">
         <Columns>
-            <asp:HyperLinkField HeaderText="Id" DataTextField="Id" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="Default.aspx?id={0}" />
-            <asp:HyperLinkField HeaderText="Name" DataTextField="Name" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="Default.aspx?id={0}" />
+            <asp:HyperLinkField HeaderText="Id" DataTextField="Id" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publishers/{0}" />
+            <asp:HyperLinkField HeaderText="Name" DataTextField="Name" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publishers/{0}" />
         </Columns>
     </asp:GridView>
 
