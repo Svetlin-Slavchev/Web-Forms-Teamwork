@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="69d7a1873f2e437395cfda69bd87b759" Name="Diagram1">
+      <Diagram DiagramId="676d6043603043509f90644daa2ff0a9" Name="Diagram1">
         <EntityTypeShape EntityType="EBooksModel.aspnet_Applications" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
         <EntityTypeShape EntityType="EBooksModel.aspnet_Membership" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="EBooksModel.aspnet_Paths" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
@@ -31,15 +31,15 @@
         <EntityTypeShape EntityType="EBooksModel.vw_aspnet_WebPartState_Paths" Width="1.5" PointX="9.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EBooksModel.vw_aspnet_WebPartState_Shared" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EBooksModel.vw_aspnet_WebPartState_User" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
-        <AssociationConnector Association="EBooksModel.FK__aspnet_Me__Appli__276EDEB3" ManuallyRouted="false" />
-        <AssociationConnector Association="EBooksModel.FK__aspnet_Pa__Appli__59063A47" ManuallyRouted="false" />
-        <AssociationConnector Association="EBooksModel.FK__aspnet_Ro__Appli__45F365D3" ManuallyRouted="false" />
-        <AssociationConnector Association="EBooksModel.FK__aspnet_Us__Appli__173876EA" ManuallyRouted="false" />
-        <AssociationConnector Association="EBooksModel.FK__aspnet_Me__UserI__286302EC" ManuallyRouted="false" />
-        <AssociationConnector Association="EBooksModel.FK__aspnet_Pe__PathI__5EBF139D" ManuallyRouted="false" />
-        <AssociationConnector Association="EBooksModel.FK__aspnet_Pe__PathI__628FA481" ManuallyRouted="false" />
-        <AssociationConnector Association="EBooksModel.FK__aspnet_Pe__UserI__6383C8BA" ManuallyRouted="false" />
-        <AssociationConnector Association="EBooksModel.FK__aspnet_Pr__UserI__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Me__Appli__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Pa__Appli__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Ro__Appli__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Us__Appli__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Me__UserI__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Pe__PathI__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Pe__PathI__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Pe__UserI__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="EBooksModel.FK__aspnet_Pr__UserI__48CFD27E" ManuallyRouted="false" />
         <AssociationConnector Association="EBooksModel.FK_Books_aspnet_Users" ManuallyRouted="false" />
         <AssociationConnector Association="EBooksModel.FK_Books_Users_Rating_aspnet_Users" ManuallyRouted="false" />
         <AssociationConnector Association="EBooksModel.FK_Comments_aspnet_Users" ManuallyRouted="false" />

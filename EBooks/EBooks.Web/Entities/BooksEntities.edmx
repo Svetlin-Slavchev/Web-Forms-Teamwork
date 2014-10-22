@@ -140,14 +140,14 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
         </EntityType>
         <EntityType Name="Books">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
           <Property Name="SubTitle" Type="nvarchar" MaxLength="250" />
           <Property Name="Description" Type="ntext" />
@@ -181,14 +181,14 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Comments">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
           <Property Name="BookId" Type="int" Nullable="false" />
           <Property Name="Content" Type="ntext" Nullable="false" />
@@ -197,7 +197,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -359,7 +359,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Property Name="DataSize" Type="int" />
           <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
         </EntityType>
-        <Association Name="FK__aspnet_Me__Appli__276EDEB3">
+        <Association Name="FK__aspnet_Me__Appli__4316F928">
           <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
           <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="*" />
           <ReferentialConstraint>
@@ -371,7 +371,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Me__UserI__286302EC">
+        <Association Name="FK__aspnet_Me__UserI__440B1D61">
           <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
           <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -383,7 +383,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Pa__Appli__59063A47">
+        <Association Name="FK__aspnet_Pa__Appli__44FF419A">
           <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
           <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="*" />
           <ReferentialConstraint>
@@ -395,7 +395,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Pe__PathI__5EBF139D">
+        <Association Name="FK__aspnet_Pe__PathI__45F365D3">
           <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="1" />
           <End Role="aspnet_PersonalizationAllUsers" Type="Self.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -407,7 +407,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Pe__PathI__628FA481">
+        <Association Name="FK__aspnet_Pe__PathI__46E78A0C">
           <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="0..1" />
           <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
           <ReferentialConstraint>
@@ -419,7 +419,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Pe__UserI__6383C8BA">
+        <Association Name="FK__aspnet_Pe__UserI__47DBAE45">
           <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="0..1" />
           <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
           <ReferentialConstraint>
@@ -431,7 +431,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Pr__UserI__3C69FB99">
+        <Association Name="FK__aspnet_Pr__UserI__48CFD27E">
           <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
           <End Role="aspnet_Profile" Type="Self.aspnet_Profile" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -443,7 +443,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Ro__Appli__45F365D3">
+        <Association Name="FK__aspnet_Ro__Appli__49C3F6B7">
           <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
           <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="*" />
           <ReferentialConstraint>
@@ -455,7 +455,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Us__Appli__173876EA">
+        <Association Name="FK__aspnet_Us__Appli__4AB81AF0">
           <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
           <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -467,7 +467,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Us__RoleI__4AB81AF0">
+        <Association Name="FK__aspnet_Us__RoleI__4BAC3F29">
           <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="1" />
           <End Role="aspnet_UsersInRoles" Type="Self.aspnet_UsersInRoles" Multiplicity="*" />
           <ReferentialConstraint>
@@ -479,7 +479,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Us__UserI__49C3F6B7">
+        <Association Name="FK__aspnet_Us__UserI__4CA06362">
           <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
           <End Role="aspnet_UsersInRoles" Type="Self.aspnet_UsersInRoles" Multiplicity="*" />
           <ReferentialConstraint>
@@ -710,47 +710,47 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
     [vw_aspnet_WebPartState_User].[LastUpdatedDate] AS [LastUpdatedDate]
     FROM [dbo].[vw_aspnet_WebPartState_User] AS [vw_aspnet_WebPartState_User]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__aspnet_Me__Appli__276EDEB3" Association="Self.FK__aspnet_Me__Appli__276EDEB3">
+          <AssociationSet Name="FK__aspnet_Me__Appli__4316F928" Association="Self.FK__aspnet_Me__Appli__4316F928">
             <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
             <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Me__UserI__286302EC" Association="Self.FK__aspnet_Me__UserI__286302EC">
+          <AssociationSet Name="FK__aspnet_Me__UserI__440B1D61" Association="Self.FK__aspnet_Me__UserI__440B1D61">
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
             <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Pa__Appli__59063A47" Association="Self.FK__aspnet_Pa__Appli__59063A47">
+          <AssociationSet Name="FK__aspnet_Pa__Appli__44FF419A" Association="Self.FK__aspnet_Pa__Appli__44FF419A">
             <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
             <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Pe__PathI__5EBF139D" Association="Self.FK__aspnet_Pe__PathI__5EBF139D">
+          <AssociationSet Name="FK__aspnet_Pe__PathI__45F365D3" Association="Self.FK__aspnet_Pe__PathI__45F365D3">
             <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
             <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Pe__PathI__628FA481" Association="Self.FK__aspnet_Pe__PathI__628FA481">
+          <AssociationSet Name="FK__aspnet_Pe__PathI__46E78A0C" Association="Self.FK__aspnet_Pe__PathI__46E78A0C">
             <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
             <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Pe__UserI__6383C8BA" Association="Self.FK__aspnet_Pe__UserI__6383C8BA">
+          <AssociationSet Name="FK__aspnet_Pe__UserI__47DBAE45" Association="Self.FK__aspnet_Pe__UserI__47DBAE45">
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
             <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Pr__UserI__3C69FB99" Association="Self.FK__aspnet_Pr__UserI__3C69FB99">
+          <AssociationSet Name="FK__aspnet_Pr__UserI__48CFD27E" Association="Self.FK__aspnet_Pr__UserI__48CFD27E">
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
             <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Ro__Appli__45F365D3" Association="Self.FK__aspnet_Ro__Appli__45F365D3">
+          <AssociationSet Name="FK__aspnet_Ro__Appli__49C3F6B7" Association="Self.FK__aspnet_Ro__Appli__49C3F6B7">
             <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
             <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Us__Appli__173876EA" Association="Self.FK__aspnet_Us__Appli__173876EA">
+          <AssociationSet Name="FK__aspnet_Us__Appli__4AB81AF0" Association="Self.FK__aspnet_Us__Appli__4AB81AF0">
             <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Us__RoleI__4AB81AF0" Association="Self.FK__aspnet_Us__RoleI__4AB81AF0">
+          <AssociationSet Name="FK__aspnet_Us__RoleI__4BAC3F29" Association="Self.FK__aspnet_Us__RoleI__4BAC3F29">
             <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
             <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Us__UserI__49C3F6B7" Association="Self.FK__aspnet_Us__UserI__49C3F6B7">
+          <AssociationSet Name="FK__aspnet_Us__UserI__4CA06362" Association="Self.FK__aspnet_Us__UserI__4CA06362">
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
             <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
           </AssociationSet>
@@ -804,10 +804,10 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Property Name="LoweredApplicationName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ApplicationId" Type="Guid" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="aspnet_Membership" Relationship="Self.FK__aspnet_Me__Appli__276EDEB3" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
-          <NavigationProperty Name="aspnet_Paths" Relationship="Self.FK__aspnet_Pa__Appli__59063A47" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
-          <NavigationProperty Name="aspnet_Roles" Relationship="Self.FK__aspnet_Ro__Appli__45F365D3" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
-          <NavigationProperty Name="aspnet_Users" Relationship="Self.FK__aspnet_Us__Appli__173876EA" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
+          <NavigationProperty Name="aspnet_Membership" Relationship="Self.FK__aspnet_Me__Appli__4316F928" FromRole="aspnet_Applications" ToRole="aspnet_Membership" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="Self.FK__aspnet_Pa__Appli__44FF419A" FromRole="aspnet_Applications" ToRole="aspnet_Paths" />
+          <NavigationProperty Name="aspnet_Roles" Relationship="Self.FK__aspnet_Ro__Appli__49C3F6B7" FromRole="aspnet_Applications" ToRole="aspnet_Roles" />
+          <NavigationProperty Name="aspnet_Users" Relationship="Self.FK__aspnet_Us__Appli__4AB81AF0" FromRole="aspnet_Applications" ToRole="aspnet_Users" />
         </EntityType>
         <EntityType Name="aspnet_Membership">
           <Key>
@@ -834,8 +834,8 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
           <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="aspnet_Applications" Relationship="Self.FK__aspnet_Me__Appli__276EDEB3" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
-          <NavigationProperty Name="aspnet_Users" Relationship="Self.FK__aspnet_Me__UserI__286302EC" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="Self.FK__aspnet_Me__Appli__4316F928" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Users" Relationship="Self.FK__aspnet_Me__UserI__440B1D61" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
         </EntityType>
         <EntityType Name="aspnet_Paths">
           <Key>
@@ -845,9 +845,9 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Property Name="PathId" Type="Guid" Nullable="false" />
           <Property Name="Path" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LoweredPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="aspnet_Applications" Relationship="Self.FK__aspnet_Pa__Appli__59063A47" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
-          <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="Self.FK__aspnet_Pe__PathI__5EBF139D" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
-          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="Self.FK__aspnet_Pe__PathI__628FA481" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="Self.FK__aspnet_Pa__Appli__44FF419A" FromRole="aspnet_Paths" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_PersonalizationAllUsers" Relationship="Self.FK__aspnet_Pe__PathI__45F365D3" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationAllUsers" />
+          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="Self.FK__aspnet_Pe__PathI__46E78A0C" FromRole="aspnet_Paths" ToRole="aspnet_PersonalizationPerUser" />
         </EntityType>
         <EntityType Name="aspnet_PersonalizationAllUsers">
           <Key>
@@ -856,7 +856,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Property Name="PathId" Type="Guid" Nullable="false" />
           <Property Name="PageSettings" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="aspnet_Paths" Relationship="Self.FK__aspnet_Pe__PathI__5EBF139D" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="Self.FK__aspnet_Pe__PathI__45F365D3" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
         </EntityType>
         <EntityType Name="aspnet_PersonalizationPerUser">
           <Key>
@@ -867,8 +867,8 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Property Name="UserId" Type="Guid" />
           <Property Name="PageSettings" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="aspnet_Paths" Relationship="Self.FK__aspnet_Pe__PathI__628FA481" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
-          <NavigationProperty Name="aspnet_Users" Relationship="Self.FK__aspnet_Pe__UserI__6383C8BA" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
+          <NavigationProperty Name="aspnet_Paths" Relationship="Self.FK__aspnet_Pe__PathI__46E78A0C" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
+          <NavigationProperty Name="aspnet_Users" Relationship="Self.FK__aspnet_Pe__UserI__47DBAE45" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
         </EntityType>
         <EntityType Name="aspnet_Profile">
           <Key>
@@ -879,7 +879,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Property Name="PropertyValuesString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PropertyValuesBinary" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
           <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="aspnet_Users" Relationship="Self.FK__aspnet_Pr__UserI__3C69FB99" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
+          <NavigationProperty Name="aspnet_Users" Relationship="Self.FK__aspnet_Pr__UserI__48CFD27E" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
         </EntityType>
         <EntityType Name="aspnet_Roles">
           <Key>
@@ -890,7 +890,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Property Name="RoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LoweredRoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="aspnet_Applications" Relationship="Self.FK__aspnet_Ro__Appli__45F365D3" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="Self.FK__aspnet_Ro__Appli__49C3F6B7" FromRole="aspnet_Roles" ToRole="aspnet_Applications" />
           <NavigationProperty Name="aspnet_Users" Relationship="Self.aspnet_UsersInRoles" FromRole="aspnet_Roles" ToRole="aspnet_Users" />
         </EntityType>
         <EntityType Name="aspnet_SchemaVersions">
@@ -913,10 +913,10 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Property Name="MobileAlias" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
           <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
           <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="aspnet_Applications" Relationship="Self.FK__aspnet_Us__Appli__173876EA" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
-          <NavigationProperty Name="aspnet_Membership" Relationship="Self.FK__aspnet_Me__UserI__286302EC" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
-          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="Self.FK__aspnet_Pe__UserI__6383C8BA" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
-          <NavigationProperty Name="aspnet_Profile" Relationship="Self.FK__aspnet_Pr__UserI__3C69FB99" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
+          <NavigationProperty Name="aspnet_Applications" Relationship="Self.FK__aspnet_Us__Appli__4AB81AF0" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
+          <NavigationProperty Name="aspnet_Membership" Relationship="Self.FK__aspnet_Me__UserI__440B1D61" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+          <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="Self.FK__aspnet_Pe__UserI__47DBAE45" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
+          <NavigationProperty Name="aspnet_Profile" Relationship="Self.FK__aspnet_Pr__UserI__48CFD27E" FromRole="aspnet_Users" ToRole="aspnet_Profile" />
           <NavigationProperty Name="Books" Relationship="Self.FK_Books_aspnet_Users" FromRole="aspnet_Users" ToRole="Books" />
           <NavigationProperty Name="Books_Users_Rating" Relationship="Self.FK_Books_Users_Rating_aspnet_Users" FromRole="aspnet_Users" ToRole="Books_Users_Rating" />
           <NavigationProperty Name="Comments" Relationship="Self.FK_Comments_aspnet_Users" FromRole="aspnet_Users" ToRole="Comments" />
@@ -946,7 +946,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Books" Relationship="Self.Books_Authors" FromRole="Authors" ToRole="Books" />
         </EntityType>
@@ -954,7 +954,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SubTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -988,7 +988,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Books" Relationship="Self.FK_Books_Categories" FromRole="Categories" ToRole="Books" />
         </EntityType>
@@ -996,7 +996,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="UserId" Type="Guid" Nullable="false" />
           <Property Name="BookId" Type="Int32" Nullable="false" />
           <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
@@ -1007,7 +1007,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Books" Relationship="Self.FK_Books_Publishers" FromRole="Publishers" ToRole="Books" />
         </EntityType>
@@ -1152,7 +1152,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <Property Name="DataSize" Type="Int32" />
           <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
-        <Association Name="FK__aspnet_Me__Appli__276EDEB3">
+        <Association Name="FK__aspnet_Me__Appli__4316F928">
           <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
           <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1164,7 +1164,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Pa__Appli__59063A47">
+        <Association Name="FK__aspnet_Pa__Appli__44FF419A">
           <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
           <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1176,7 +1176,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Ro__Appli__45F365D3">
+        <Association Name="FK__aspnet_Ro__Appli__49C3F6B7">
           <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
           <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1188,7 +1188,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Us__Appli__173876EA">
+        <Association Name="FK__aspnet_Us__Appli__4AB81AF0">
           <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
           <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1200,7 +1200,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Me__UserI__286302EC">
+        <Association Name="FK__aspnet_Me__UserI__440B1D61">
           <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
           <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -1212,7 +1212,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Pe__PathI__5EBF139D">
+        <Association Name="FK__aspnet_Pe__PathI__45F365D3">
           <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="1" />
           <End Role="aspnet_PersonalizationAllUsers" Type="Self.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -1224,7 +1224,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Pe__PathI__628FA481">
+        <Association Name="FK__aspnet_Pe__PathI__46E78A0C">
           <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="0..1" />
           <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1236,7 +1236,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Pe__UserI__6383C8BA">
+        <Association Name="FK__aspnet_Pe__UserI__47DBAE45">
           <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="0..1" />
           <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
           <ReferentialConstraint>
@@ -1248,7 +1248,7 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__aspnet_Pr__UserI__3C69FB99">
+        <Association Name="FK__aspnet_Pr__UserI__48CFD27E">
           <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
           <End Role="aspnet_Profile" Type="Self.aspnet_Profile" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -1379,39 +1379,39 @@ warning 6002: The table/view 'EBooks.dbo.vw_aspnet_WebPartState_User' does not h
           <EntitySet Name="vw_aspnet_WebPartState_Paths" EntityType="Self.vw_aspnet_WebPartState_Paths" />
           <EntitySet Name="vw_aspnet_WebPartState_Shared" EntityType="Self.vw_aspnet_WebPartState_Shared" />
           <EntitySet Name="vw_aspnet_WebPartState_User" EntityType="Self.vw_aspnet_WebPartState_User" />
-          <AssociationSet Name="FK__aspnet_Me__Appli__276EDEB3" Association="Self.FK__aspnet_Me__Appli__276EDEB3">
+          <AssociationSet Name="FK__aspnet_Me__Appli__4316F928" Association="Self.FK__aspnet_Me__Appli__4316F928">
             <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
             <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Pa__Appli__59063A47" Association="Self.FK__aspnet_Pa__Appli__59063A47">
+          <AssociationSet Name="FK__aspnet_Pa__Appli__44FF419A" Association="Self.FK__aspnet_Pa__Appli__44FF419A">
             <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
             <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Ro__Appli__45F365D3" Association="Self.FK__aspnet_Ro__Appli__45F365D3">
+          <AssociationSet Name="FK__aspnet_Ro__Appli__49C3F6B7" Association="Self.FK__aspnet_Ro__Appli__49C3F6B7">
             <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
             <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Us__Appli__173876EA" Association="Self.FK__aspnet_Us__Appli__173876EA">
+          <AssociationSet Name="FK__aspnet_Us__Appli__4AB81AF0" Association="Self.FK__aspnet_Us__Appli__4AB81AF0">
             <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Me__UserI__286302EC" Association="Self.FK__aspnet_Me__UserI__286302EC">
+          <AssociationSet Name="FK__aspnet_Me__UserI__440B1D61" Association="Self.FK__aspnet_Me__UserI__440B1D61">
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
             <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Pe__PathI__5EBF139D" Association="Self.FK__aspnet_Pe__PathI__5EBF139D">
+          <AssociationSet Name="FK__aspnet_Pe__PathI__45F365D3" Association="Self.FK__aspnet_Pe__PathI__45F365D3">
             <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
             <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Pe__PathI__628FA481" Association="Self.FK__aspnet_Pe__PathI__628FA481">
+          <AssociationSet Name="FK__aspnet_Pe__PathI__46E78A0C" Association="Self.FK__aspnet_Pe__PathI__46E78A0C">
             <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
             <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Pe__UserI__6383C8BA" Association="Self.FK__aspnet_Pe__UserI__6383C8BA">
+          <AssociationSet Name="FK__aspnet_Pe__UserI__47DBAE45" Association="Self.FK__aspnet_Pe__UserI__47DBAE45">
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
             <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
           </AssociationSet>
-          <AssociationSet Name="FK__aspnet_Pr__UserI__3C69FB99" Association="Self.FK__aspnet_Pr__UserI__3C69FB99">
+          <AssociationSet Name="FK__aspnet_Pr__UserI__48CFD27E" Association="Self.FK__aspnet_Pr__UserI__48CFD27E">
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
             <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
           </AssociationSet>

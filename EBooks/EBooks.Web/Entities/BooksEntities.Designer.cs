@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\My Documents\C#\GitHub\Web-Forms-Teamwork\EBooks\EBooks.Web\Entities\BooksEntities.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Projects\TeamWorkWebForms\EBooks\EBooks.Web\Entities\BooksEntities.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
