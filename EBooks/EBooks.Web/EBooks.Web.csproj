@@ -150,6 +150,10 @@
     <Content Include="Account\Forgot.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Author\Create.aspx" />
+    <Content Include="Author\Edit.aspx" />
+    <Content Include="Author\Index.aspx" />
+    <Content Include="Author\View.aspx" />
     <Content Include="BasicDocumentation\CategoriIndexPage.png" />
     <Content Include="BasicDocumentation\CategoryViewPage.png" />
     <Content Include="BasicDocumentation\Header.png" />
@@ -262,6 +266,34 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Author\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Author\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Author\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Author\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Author\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Author\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Author\View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Author\View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Book\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -418,6 +450,7 @@
     <Compile Include="Entities\vw_aspnet_WebPartState_User.cs">
       <DependentUpon>BooksEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Factories\AuthorModelFactory.cs" />
     <Compile Include="Factories\BookModelFactory.cs" />
     <Compile Include="Factories\CategoryModelFactory.cs" />
     <Compile Include="Factories\UserModelFactory.cs" />

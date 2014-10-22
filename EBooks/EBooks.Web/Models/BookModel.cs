@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 
 namespace EBooks.Web.Models
@@ -9,6 +10,28 @@ namespace EBooks.Web.Models
     public class BookModel
     {
         private static EBooksEntities db = new EBooksEntities();
+
+        public static Expression<Func<Entities.Book, BookModel>> FromBookModel
+        {
+            get
+            {
+                return b => new BookModel
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    SubTitle = b.SubTitle,
+                    Description = b.Description,
+                    ISBN = b.ISBN,
+                    Pages = b.Pages,
+                    Year = b.Year,
+                    PublisherId = b.PublisherId,
+                    ImageURL = b.ImageURL,
+                    DownloadURL = b.DownloadURL,
+                    UploaderId = b.UploaderUserId,
+                    CategoryId = b.CategoryId
+                };
+            }
+        }
 
         public int Id { get; set; }
         public string Title { get; set; }
