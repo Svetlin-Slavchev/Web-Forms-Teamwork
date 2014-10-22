@@ -1,7 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="EBooks.Web.SiteMaster" %>
 
-<%@ Register Src="~/UserControls/SearchPanel.ascx" TagPrefix="uc1" TagName="SearchPanel" %>
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -44,30 +42,41 @@
                 <div class="row">
                     <div class="col-md-3">
                         <a runat="server" href="~/">
-                            <img runat="server" src="~/Content/Images/alabala.jpg" height="180" width="180"/>
+                            <img runat="server" src="~/Content/Images/alabala.jpg" height="180" width="180" />
                         </a>
                     </div>
                     <div class="col-md-9">
                         <h1>Site header</h1>
                         <div class="navbar">
                             <div class="container">
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                </div>
-                                <div class="navbar-collapse collapse">
-                                    <ul class="nav navbar-nav">
-                                        <li><a runat="server" href="Category/Index.aspx">Categories</a></li>
-                                        <li><a runat="server" href="Author/Index.aspx">Authors</a></li>
-                                        <li><a runat="server" href="Publishers/">Publishers</a></li>
-                                        <% if (Page.User.Identity.IsAuthenticated)
-                                           { %>
-                                        <li><a runat="server" href="Profille/View.aspx">My profile</a></li>
-                                        <% } %>
-                                    </ul>
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                    </div>
+                                    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav nav-pills">
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Search book by<span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a runat="server" href="Category/Index.aspx">Categories</a></li>
+                                                    <li><a runat="server" href="Author/Index.aspx">Authors</a></li>
+                                                    <li><a runat="server" href="Publisher/">Publishers</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <% if (Page.User.Identity.IsAuthenticated)
+                                               { %>
+                                            <li><a runat="server" href="Profille/View.aspx">My profile</a></li>
+                                            <% } %>
+                                        </ul>
+                                    </div>
+
                                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                                         <AnonymousTemplate>
                                             <ul class="nav navbar-nav navbar-right">
@@ -95,11 +104,13 @@
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
-        <hr />
-        <footer>
-            <p>&copy; <%: DateTime.Now.Year %> - EBooks</p>
-        </footer>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - EBooks</p>
+            </footer>
         </div>
     </form>
 </body>
 </html>
+<script src="../Scripts/fastLiveFilter.js"></script>
+<script src="../Scripts/custom.js"></script>

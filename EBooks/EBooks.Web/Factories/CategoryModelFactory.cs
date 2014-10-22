@@ -1,9 +1,7 @@
 ﻿using EBooks.Web.Entities;
 using EBooks.Web.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace EBooks.Web.Factories
 {
@@ -27,7 +25,7 @@ namespace EBooks.Web.Factories
                     })
                     .FirstOrDefault();
 
-                model.Books = BookModelFactory.GetAllBooksForCategory(modelId);
+                model.Books = BookModelFactory.GetAllBooksByCategory(modelId);
 
                 return model;
             }
@@ -42,14 +40,15 @@ namespace EBooks.Web.Factories
                 {
                     Id = x.Id,
                     Name = x.Name
-                });
+                })
+                .ToList();
 
             foreach (var category in categories)
             {
-                category.Books = BookModelFactory.GetAllBooksForCategory(category.Id);
+                category.Books = BookModelFactory.GetAllBooksByCategory(category.Id);
             }
 
-            return categories.ToList();
+            return categories;
         }   
     }
 }

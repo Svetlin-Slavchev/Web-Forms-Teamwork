@@ -7,9 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EBooks.Web.Profille {
+namespace EBooks.Web.Publisher {
     
     
     public partial class View {
+        
+        /// <summary>
+        /// PublisherSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::EBooks.Web.UserControls.PublisherSearch PublisherSearch;
     }
 }

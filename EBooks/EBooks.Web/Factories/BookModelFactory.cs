@@ -34,10 +34,33 @@ namespace EBooks.Web.Factories
             return searchedBook[0];
         }
 
-        public static List<BookModel> GetAllBooksForCategory(int categoryId)
+        public static List<BookModel> GetAllBooksByCategory(int categoryId)
         {
             var books = db.Books
                     .Where(x => x.Id == categoryId)
+                    .Select(x => new BookModel
+                    {
+                        Id = x.Id,
+                        Title = x.Title,
+                        SubTitle = x.SubTitle,
+                        Description = x.Description,
+                        ISBN = x.ISBN,
+                        Pages = x.Pages,
+                        Year = x.Year,
+                        PublisherId = x.PublisherId,
+                        ImageURL = x.ImageURL,
+                        DownloadURL = x.DownloadURL,
+                        UploaderId = x.UploaderUserId,
+                        CategoryId = x.CategoryId
+                    })
+                    .ToList();
+
+            return books;
+        }
+
+        public static List<BookModel> GetAll()
+        {
+            var books = db.Books
                     .Select(x => new BookModel
                     {
                         Id = x.Id,

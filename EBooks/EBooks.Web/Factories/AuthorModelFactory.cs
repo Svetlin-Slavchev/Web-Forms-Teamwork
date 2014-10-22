@@ -17,15 +17,12 @@ namespace EBooks.Web.Factories
                 .Select(x => new AuthorModel
                 {
                     Id = x.Id,
-                    Name = x.Name
-                });
+                    Name = x.Name,
+                    Books = x.Books.AsQueryable().Select(BookModel.FromBookModel).ToList()
+                })
+                .ToList();
 
-            //foreach (var category in authors)
-            //{
-            //    authors.Books = BookModelFactory.GetAllBooksForCategory(category.Id);
-            //}
-
-            return authors.ToList();
+            return authors;
         }
 
         public static AuthorModel GetModel(string queryString)

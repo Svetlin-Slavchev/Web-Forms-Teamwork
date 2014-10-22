@@ -11,7 +11,7 @@ namespace EBooks.Web.UserControls
 {
 
 
-    public partial class SearchPanel
+    public partial class CategorySearch
     {
     }
 }

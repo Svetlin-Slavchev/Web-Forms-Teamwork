@@ -28,7 +28,7 @@ namespace EBooks.Web.Models
             {
                 this.Id = category.Id;
                 this.Name = category.Name;
-                this.Books = BookModelFactory.GetAllBooksForCategory(this.Id);
+                this.Books = BookModelFactory.GetAllBooksByCategory(this.Id);
             }
         }
     }

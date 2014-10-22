@@ -18,7 +18,7 @@ namespace EBooks.Web.Category
 
             this.CategoryName.Text = model.Name;
 
-            var allBooksFromCategory = BookModelFactory.GetAllBooksForCategory(model.Id);
+            var allBooksFromCategory = BookModelFactory.GetAllBooksByCategory(model.Id);
             this.BooksByCategoryGridView.DataSource = allBooksFromCategory;
             this.BooksByCategoryGridView.DataBind();
         }

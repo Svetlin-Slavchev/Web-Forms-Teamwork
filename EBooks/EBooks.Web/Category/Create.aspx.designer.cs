@@ -13,12 +13,12 @@ namespace EBooks.Web.Category {
     public partial class Create {
         
         /// <summary>
-        /// SearchPanel control.
+        /// CategorySearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EBooks.Web.UserControls.SearchPanel SearchPanel;
+        protected global::EBooks.Web.UserControls.CategorySearch CategorySearch;
     }
 }

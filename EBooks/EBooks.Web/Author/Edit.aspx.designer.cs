@@ -13,12 +13,12 @@ namespace EBooks.Web.Author {
     public partial class Edit {
         
         /// <summary>
-        /// SearchPanel control.
+        /// AuthorSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EBooks.Web.UserControls.SearchPanel SearchPanel;
+        protected global::EBooks.Web.UserControls.AuthorSearch AuthorSearch;
     }
 }

@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EBooks.Web.Profille {
+namespace EBooks.Web.UserControls {
     
     
-    public partial class View {
+    public partial class BookSearch {
     }
 }
