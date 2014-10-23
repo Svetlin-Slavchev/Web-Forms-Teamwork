@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using EBooks.Web.Entities;
 using EBooks.Web.Factories;
+using System.IO;
 
 namespace EBooks.Web.Book
 {
@@ -62,6 +63,28 @@ namespace EBooks.Web.Book
             var categoryName = this.CategoryDropDown.SelectedValue;
             var category = db.Categories.FirstOrDefault(c => c.Name == categoryName); 
             newBook.CategoryId = category.Id;
+            if ((this.Content.PostedFile != null) && (this.Content.PostedFile.ContentLength > 0))
+            {
+                string fileName = System.IO.Path.GetFileName(this.Content.PostedFile.FileName);
+                if (!Directory.Exists(Server.MapPath("BooksContent")))
+                {
+                    Directory.CreateDirectory(Server.MapPath("BooksContent"));
+                }
+                string saveLocation = Server.MapPath("BooksContent") + "\\" + fileName;
+                try
+                {
+                    this.Content.PostedFile.SaveAs(saveLocation);
+                    newBook.DownloadURL = "BooksContent" + "\\" + fileName;
+                    //Response.Write("The file has been uploaded.");
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("Error: " + ex.Message);
+                    //Note: Exception.Message returns detailed message that describes the current exception. 
+                    //For security reasons, we do not recommend you return Exception.Message to end users in 
+                    //production environments. It would be better just to put a generic error message. 
+                }
+            }
             if ((this.Picture.PostedFile != null) && (this.Picture.PostedFile.ContentLength > 0))
             {
                 string fileName = System.IO.Path.GetFileName(this.Picture.PostedFile.FileName);

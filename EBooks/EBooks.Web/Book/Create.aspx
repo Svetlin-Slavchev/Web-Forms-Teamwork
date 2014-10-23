@@ -76,6 +76,12 @@
                         <asp:FileUpload runat="server" ID="Picture" CssClass="form-control" />
                     </div>
                 </div>
+                 <div class="form-group">
+                    <asp:Label runat="server" AssociatedControlID="Content" CssClass="col-md-2 control-label">Upload book content</asp:Label>
+                    <div class="col-md-10">
+                        <asp:FileUpload runat="server" ID="Content" CssClass="form-control" />
+                    </div>
+                </div>
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <asp:Button runat="server" OnClick="CreateBook_Click" Text="Create book" CssClass="btn btn-primary" />
