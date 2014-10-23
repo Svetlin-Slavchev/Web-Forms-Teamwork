@@ -14,3 +14,9 @@ tr:not(:last-child) td:nth-child(3) a{
     color:darkcyan;
     border:outset
 }
+
+.bookItem{
+    width:200px;
+    font-size:small;
+    display:inline-block;
+}
