@@ -20,6 +20,12 @@ namespace EBooks.Web.Book
                 var categories = CategoryModelFactory.GetAll();
                 this.CategoryDropDown.DataSource = categories;
                 this.CategoryDropDown.DataBind();
+
+                this.Publisher.DataSource = db.Publishers.Select(x => x.Name).ToList();
+                this.Publisher.DataBind();
+
+                this.Author.DataSource = db.Publishers.Select(x => x.Name).ToList();
+                this.Author.DataBind();
             }
         }
 
@@ -59,6 +65,7 @@ namespace EBooks.Web.Book
                     //production environments. It would be better just to put a generic error message. 
                 }
             }
+           
             author.Books.Add(newBook);
             this.db.Publishers.Add(publisher);
             this.db.Authors.Add(author);
