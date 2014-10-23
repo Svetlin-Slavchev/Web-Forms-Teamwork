@@ -106,6 +106,7 @@ namespace EBooks.Web.Book
             author.Books.Add(newBook);
             this.db.Books.Add(newBook);
             this.db.SaveChanges();
+            Response.Redirect("Index.aspx?successMessage=Book was created!");
         }
     }
 }
