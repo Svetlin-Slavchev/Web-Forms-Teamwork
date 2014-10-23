@@ -38,9 +38,9 @@ namespace EBooks.Web.Book
             newBook.Description = this.Description.Text;
             newBook.Pages = int.Parse(this.Pages.Text);
             newBook.Year = DateTime.Parse(this.Year.Text);
-            var category = new Entities.Category();
-            category.Name = this.CategoryDropDown.SelectedIndex.ToString();
-            newBook.Category = category;
+            var categoryName = this.CategoryDropDown.SelectedValue;
+            var category = db.Categories.FirstOrDefault(c => c.Name == categoryName); 
+            newBook.CategoryId = category.Id;
             if ((this.Picture.PostedFile != null) && (this.Picture.PostedFile.ContentLength > 0))
             {
                 string fn = System.IO.Path.GetFileName(this.Picture.PostedFile.FileName);
