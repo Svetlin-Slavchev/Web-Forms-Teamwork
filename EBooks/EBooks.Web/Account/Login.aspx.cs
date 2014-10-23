@@ -21,14 +21,17 @@ namespace EBooks.Web.Account
         {
             if (Membership.ValidateUser(UserName.Text, Password.Text))
             {
-                if (this.RememberMe.Checked)
+                FormsAuthentication.SetAuthCookie(this.UserName.Text,
+                    this.RememberMe.Checked == true ? true : false);
+
+                string returnUrl = Request.QueryString["ReturnUrl"];
+                if (returnUrl == null)
                 {
-                    // create persistent cookie
-                    FormsAuthentication.RedirectFromLoginPage(this.UserName.Text, true);
+                    Response.Redirect("~/Default.aspx");
                 }
                 else
                 {
-                    FormsAuthentication.RedirectFromLoginPage(this.UserName.Text, false);
+                    Response.Redirect(returnUrl);
                 }
             }
             else

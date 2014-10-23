@@ -33,8 +33,11 @@
                 </Columns>
                 <RowStyle CssClass="cursor-pointer" />
             </asp:GridView>
-            <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Category/Create.aspx"
-                CssClass="btn btn-primary" runat="server">Create</asp:HyperLink>
+            <% if (Roles.IsUserInRole(Page.User.Identity.Name, "admin"))
+               { %>
+                   <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Category/Create.aspx"
+                    CssClass="btn btn-primary" runat="server">Create</asp:HyperLink>
+            <% } %>
         </div>
     </div>
 </asp:Content>
