@@ -25,6 +25,6 @@
             </Triggers>
         </asp:UpdatePanel>
 
-         <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Publisher" runat="server">Back</asp:HyperLink>
+         <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Publisher/Index" runat="server">Back</asp:HyperLink>
     </div>
 </div>

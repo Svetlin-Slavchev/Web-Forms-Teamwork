@@ -15,9 +15,13 @@
                     <asp:HyperLinkField HeaderText="Id" DataTextField="Id" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}" />
                     <asp:HyperLinkField HeaderText="Name" DataTextField="Name" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}" />
                     <asp:HyperLinkField Text="Edit" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}/Edit" />
-                    <asp:HyperLinkField Text="Delete" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}/Delete"  />
+                    <asp:HyperLinkField Text="Delete" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}/Delete" />
                 </Columns>
             </asp:GridView>
+
+            <asp:HyperLink ID="btnCreate" NavigateUrl="~/Publisher/Create"
+                CssClass="btn btn-primary" runat="server">Create</asp:HyperLink>
+
         </div>
     </div>
 </asp:Content>

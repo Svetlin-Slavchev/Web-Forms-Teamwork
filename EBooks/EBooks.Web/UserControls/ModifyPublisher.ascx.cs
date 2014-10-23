@@ -48,7 +48,6 @@ namespace EBooks.Web.UserControls
             try
             {
                 string name = this.Name.Text;
-                int id = int.Parse(PublisherId);
 
                 using (var db = new EBooksEntities())
                 {
@@ -58,9 +57,11 @@ namespace EBooks.Web.UserControls
                             db.Publishers.Add(new Entities.Publisher { Name = name });
                             break;
                         case "Update":
+                            int id = int.Parse(PublisherId);
                             db.Publishers.Single(x => x.Id == id).Name = name;
                             break;
                         case "Delete":
+                            id = int.Parse(PublisherId);
                             db.Publishers.Remove(db.Publishers.Single(x => x.Id == id));
                             break;
                         default:
