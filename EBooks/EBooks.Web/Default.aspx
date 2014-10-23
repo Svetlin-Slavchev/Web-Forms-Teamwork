@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="EBooks.Web._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h3>All books</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="text-center">All books</h3>
             <asp:GridView ID="BooksGridView" runat="server"
                 AutoGenerateColumns="false" AllowPaging="true" PageSize="3"
                 OnPageIndexChanging="BooksGridView_PageIndexChanging"
@@ -13,4 +15,11 @@
                 </Columns>
                 <RowStyle CssClass="cursor-pointer" />
             </asp:GridView>
+        </div>
+        
+        <div class="col-md-7">
+            <img src="Content/Images/e-books.jpg" width="500" height="250"/>
+        </div>
+    </div>
+    
 </asp:Content>
