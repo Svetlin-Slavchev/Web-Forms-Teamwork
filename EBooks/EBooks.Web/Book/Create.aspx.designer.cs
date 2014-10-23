@@ -13,13 +13,13 @@ namespace EBooks.Web.Book {
     public partial class Create {
         
         /// <summary>
-        /// AllBooksSearch control.
+        /// BookSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EBooks.Web.UserControls.BookSearch AllBooksSearch;
+        protected global::EBooks.Web.UserControls.BookSearch BookSearch;
         
         /// <summary>
         /// BookTitle control.
@@ -46,7 +46,7 @@ namespace EBooks.Web.Book {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Author;
+        protected global::System.Web.UI.WebControls.TextBox Author;
         
         /// <summary>
         /// Publisher control.
@@ -55,7 +55,7 @@ namespace EBooks.Web.Book {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Publisher;
+        protected global::System.Web.UI.WebControls.TextBox Publisher;
         
         /// <summary>
         /// Description control.

@@ -36,11 +36,11 @@ namespace EBooks.Web.Book
         private void BindData()
         {
             // do not show edin and delet buttons if user is not in admin role
-            if (!UserModel.IsAdmin(Page.User.Identity.Name))
-            {
-                this.BooksGridView.Columns[2].Visible = false;
-                this.BooksGridView.Columns[3].Visible = false;
-            }
+            //if (!UserModel.IsAdmin(Page.User.Identity.Name))
+            //{
+            //    this.BooksGridView.Columns[2].Visible = false;
+            //    this.BooksGridView.Columns[3].Visible = false;
+            //}
 
             List<BookModel> books = BookModelFactory.GetAll();
 

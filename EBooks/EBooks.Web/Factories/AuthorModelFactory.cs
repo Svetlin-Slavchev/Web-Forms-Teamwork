@@ -47,5 +47,19 @@ namespace EBooks.Web.Factories
 
             return null;
         }
+
+        public static List<AuthorModel> GetAllBookAuthors(int bookId)
+        {
+            var authors = db.Authors
+                    .Where(b => b.Id == bookId)
+                    .Select(x => new AuthorModel
+                    {
+                        Id = x.Id,
+                        Name = x.Name,
+                        
+                    })
+                    .ToList();
+            return authors;
+        }
     }
 }

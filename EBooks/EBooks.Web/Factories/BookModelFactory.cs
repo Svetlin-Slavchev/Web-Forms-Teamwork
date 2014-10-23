@@ -80,5 +80,39 @@ namespace EBooks.Web.Factories
 
             return books;
         }
+
+        public static BookModel GetModel(string queryString)
+        {
+            int modelId;
+            int.TryParse(queryString, out modelId);
+
+            if (modelId != 0)
+            {
+                var model = db.Books
+                    .Where(x => x.Id == modelId)
+                    .Select(x => new BookModel
+                    {
+                        Id = x.Id,
+                        Title = x.Title,
+                        SubTitle = x.SubTitle,
+                        Description = x.Description,
+                        ISBN = x.ISBN,
+                        Pages = x.Pages,
+                        Year = x.Year,
+                        PublisherId = x.PublisherId,
+                        ImageURL = x.ImageURL,
+                        DownloadURL = x.DownloadURL,
+                        UploaderId = x.UploaderUserId,
+                        CategoryId = x.CategoryId,
+
+                    })
+                    .FirstOrDefault();
+                model.Authors = AuthorModelFactory.GetAllBookAuthors(modelId);
+
+                return model;
+            }
+
+            return null;
+        }
     }
 }

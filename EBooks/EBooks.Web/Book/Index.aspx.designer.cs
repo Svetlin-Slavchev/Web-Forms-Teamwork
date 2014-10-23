@@ -13,13 +13,13 @@ namespace EBooks.Web.Book {
     public partial class Index {
         
         /// <summary>
-        /// AllBooksSearch control.
+        /// BookSearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EBooks.Web.UserControls.BookSearch AllBooksSearch;
+        protected global::EBooks.Web.UserControls.BookSearch BookSearch;
         
         /// <summary>
         /// PanelError control.

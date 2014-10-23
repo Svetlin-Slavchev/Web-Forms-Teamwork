@@ -45,6 +45,7 @@ namespace EBooks.Web.Models
         public string DownloadURL { get; set; }
         public Guid? UploaderId { get; set; }
         public int CategoryId { get; set; }
+        public ICollection<AuthorModel> Authors { get; set; }
 
         public BookModel()
         { }
@@ -71,5 +72,15 @@ namespace EBooks.Web.Models
                 this.CategoryId = book.CategoryId;
             }
         }
+
+        //internal void Delete()
+        //{
+        //    Entities.Category category = db.Categories
+        //        .Where(x => x.Id == this.Id)
+        //        .FirstOrDefault();
+
+        //    db.Categories.Remove(category);
+        //    db.SaveChanges();
+        //}
     }
 }

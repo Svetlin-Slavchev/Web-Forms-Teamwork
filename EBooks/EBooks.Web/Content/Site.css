@@ -4,3 +4,13 @@
 #MainContent_BookImage{
     width:200px;
 }
+
+tr:not(:last-child) td:nth-child(4) a{
+    color:darkred;
+    border:outset
+}
+
+tr:not(:last-child) td:nth-child(3) a{
+    color:darkcyan;
+    border:outset
+}

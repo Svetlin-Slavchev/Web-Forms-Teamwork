@@ -5,7 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
         <div class="col-md-3">
-            <uc1:BookSearch runat="server" ID="AllBooksSearch" />
+            <uc1:BookSearch runat="server" ID="BookSearch" />
         </div>
         <div class="col-md-9">
             <asp:Panel ID="PanelError" runat="server" CssClass="alert alert-dismissable alert-danger"

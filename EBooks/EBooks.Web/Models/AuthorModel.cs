@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
 
 namespace EBooks.Web.Models
@@ -9,6 +10,19 @@ namespace EBooks.Web.Models
     public class AuthorModel
     {
         private static EBooksEntities db = new EBooksEntities();
+
+        public static Expression<Func<Entities.Author, AuthorModel>> FromAuthorModel
+        {
+            get
+            {
+                return a => new AuthorModel
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    Books = a.Books.AsQueryable().Select(BookModel.FromBookModel).ToList()
+                };
+            }
+        }
 
         public int Id { get; set; }
 
