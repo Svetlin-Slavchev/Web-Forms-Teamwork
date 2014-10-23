@@ -36,8 +36,8 @@ namespace EBooks.Web.Author
             //do not show edin and delet buttons if user is not in admin role
             if (!UserModel.IsAdmin(Page.User.Identity.Name))
             {
+                this.AuthorsGridView.Columns[1].Visible = false;
                 this.AuthorsGridView.Columns[2].Visible = false;
-                this.AuthorsGridView.Columns[3].Visible = false;
                 this.btnCreate.Visible = false;
             }
 
