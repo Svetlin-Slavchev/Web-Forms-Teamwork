@@ -106,11 +106,11 @@ namespace EBooks.Web.Book
                 oldAuthor.Books.Remove(existingBook);
                 author.Books.Add(existingBook);
                 this.db.SaveChanges();
-                Response.Redirect("Index.aspx?successMessage=Book updated!");
+                Response.Redirect("Index.aspx?successMessage=Book was updated!");
             }
             else
             {
-                Response.Redirect("Index.aspx?errorMessage=Error. Book not updated!");
+                Response.Redirect("Index.aspx?errorMessage=Error. Book was not updated!");
             }
 
         }
