@@ -16,12 +16,11 @@ namespace EBooks.Web
 
             routes.MapPageRoute("Publisher",
                     "Publisher/{id}",
-                    "~/Publisher/Default.aspx");
+                    "~/Publisher/View.aspx");
 
             routes.MapPageRoute("ModifyPublisher",
                 "Publisher/{id}/{action}",
                 "~/Publisher/{action}.aspx");
-
         }
     }
 }

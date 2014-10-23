@@ -24,6 +24,11 @@ namespace EBooks.Web.UserControls
                 throw new InvalidOperationException("InvalidRequest");
             }
 
+            if (Action == "Delete")
+            {
+                this.Name.Enabled = false;
+            }
+
             if (!this.IsPostBack )
             {
                 try
@@ -54,6 +59,7 @@ namespace EBooks.Web.UserControls
                         db.Publishers.Single(x => x.Id == id).Name = name;
                         break;
                     case "Delete":
+                        ResetPublishers(db, id);
                         db.Publishers.Remove(db.Publishers.Single(x => x.Id == id));
                         break;
                     default:
@@ -63,5 +69,15 @@ namespace EBooks.Web.UserControls
                 Response.Redirect("~/Publisher/");
             }
         }
+
+        private static void ResetPublishers(EBooksEntities db, int id)
+        {
+            var books = db.Books.Where(x => x.PublisherId == id);
+            foreach (var book in books)
+            {
+                book.Publisher = null;
+            }
+        }
+
     }
 }
