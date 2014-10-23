@@ -5,7 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
         <div class="col-md-3">
-            <uc1:AuthorSearch runat="server" id="AuthorSearch" />
+            <uc1:AuthorSearch runat="server" ID="AuthorSearch" />
         </div>
         <div class="col-md-9">
             <div class="row">
@@ -24,6 +24,7 @@
                 </div>
 
                 <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Author/Index.aspx" runat="server">Back</asp:HyperLink>
+            </div>
         </div>
     </div>
 </asp:Content>

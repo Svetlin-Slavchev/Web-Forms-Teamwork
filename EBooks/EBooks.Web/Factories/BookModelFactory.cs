@@ -37,7 +37,7 @@ namespace EBooks.Web.Factories
         public static List<BookModel> GetAllBooksByCategory(int categoryId)
         {
             var books = db.Books
-                    .Where(x => x.Id == categoryId)
+                    .Where(x => x.CategoryId == categoryId)
                     .Select(x => new BookModel
                     {
                         Id = x.Id,
