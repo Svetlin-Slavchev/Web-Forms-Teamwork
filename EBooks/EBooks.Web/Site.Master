@@ -44,11 +44,11 @@
                 <div class="row">
                     <div class="col-md-3">
                         <a runat="server" href="~/">
-                            <img runat="server" src="~/Content/Images/alabala.jpg" height="180" width="180" />
+                            <img runat="server" src="~/Content/Images/Ebooks.jpg" height="180" width="180" />
                         </a>
                     </div>
                     <div class="col-md-9">
-                        <h1>Site header</h1>
+                        <h1 class="text-center">Welcome to magic Ebooks</h1>
                         <div class="navbar">
                             <div class="container">
                                 <div class="container-fluid">
@@ -83,9 +83,9 @@
 
                                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                                         <AnonymousTemplate>
-                                            <ul class="nav navbar-nav navbar-right">
-                                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                                            <ul class="nav nav-pills navbar-right">
+                                                <li><a class="btn btn-sm btn-info" runat="server" href="~/Account/Register">Register</a></li>
+                                                <li><a class="btn btn-sm btn-info" runat="server" href="~/Account/Login">Log in</a></li>
                                             </ul>
                                         </AnonymousTemplate>
                                         <LoggedInTemplate>
