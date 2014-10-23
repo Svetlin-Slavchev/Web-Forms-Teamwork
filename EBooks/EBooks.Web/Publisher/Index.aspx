@@ -8,42 +8,15 @@
             <uc1:PublisherSearch runat="server" ID="PublisherSearch" />
         </div>
         <div class="col-md-9">
-            <asp:GridView runat="server" ID="PublishersData" AutoGenerateColumns="false">
+            <asp:GridView runat="server" ID="PublishersData" AutoGenerateColumns="false" AllowPaging="true" PageSize="10"
+                CssClass="table table-hover table-striped" GridLines="None">
                 <Columns>
                     <asp:HyperLinkField HeaderText="Id" DataTextField="Id" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}" />
                     <asp:HyperLinkField HeaderText="Name" DataTextField="Name" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}" />
+                    <asp:HyperLinkField Text="Edit" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}/Edit" />
+                    <asp:HyperLinkField Text="Delete" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}/Delete" />
                 </Columns>
             </asp:GridView>
-
-            <h2><%: SelectedPublisher %>  </h2>
-
-            <asp:ListView runat="server" ID="BooksData">
-                <LayoutTemplate>
-                    <table border="1">
-                        <tr>
-                            <th> Title </th>
-                            <th> Description </th>
-                        </tr>
-                        <tr runat="server" id="itemPlaceholder"></tr>
-                    </table>
-                </LayoutTemplate>
-                <ItemTemplate>
-                    <tr>
-                        <td> <%#Eval("Title") %> </td>
-                        <td> <asp:LinkButton runat="server" OnClick="ShowDetails_Click" Text='<%#Eval("Description") %>' CommandArgument='<%#Eval("Id") %>' /> </td>
-                    </tr>
-                </ItemTemplate>
-            </asp:ListView>
-
-            <asp:UpdatePanel runat="server" ChildrenAsTriggers="false" UpdateMode="Conditional">
-                <ContentTemplate>
-                    <h2 runat="server" id="AdditionalInfoHeader" visible="false"> Additional Information </h2>
-                    <asp:DetailsView runat="server" ID="AdditionalBookData" />
-                </ContentTemplate>
-                <Triggers>
-                    <asp:AsyncPostBackTrigger ControlID="BooksData" />
-                </Triggers>
-            </asp:UpdatePanel>
         </div>
     </div>
 </asp:Content>

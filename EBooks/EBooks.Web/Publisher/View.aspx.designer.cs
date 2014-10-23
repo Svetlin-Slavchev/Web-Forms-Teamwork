@@ -20,5 +20,32 @@ namespace EBooks.Web.Publisher {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::EBooks.Web.UserControls.PublisherSearch PublisherSearch;
+        
+        /// <summary>
+        /// BooksData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView BooksData;
+        
+        /// <summary>
+        /// AdditionalInfoHeader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AdditionalInfoHeader;
+        
+        /// <summary>
+        /// AdditionalBookData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView AdditionalBookData;
     }
 }
