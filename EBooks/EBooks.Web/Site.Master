@@ -74,10 +74,10 @@
                                                 </ul>
                                             </li>
 
-                                            <% if (Page.User.Identity.IsAuthenticated)
+                                            <%--<% if (Page.User.Identity.IsAuthenticated)
                                                { %>
                                             <li><a runat="server" href="Profille/View.aspx">My profile</a></li>
-                                            <% } %>
+                                            <% } %>--%>
                                         </ul>
                                     </div>
 
