@@ -15,9 +15,12 @@ namespace EBooks.Web.Book
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var categories = CategoryModelFactory.GetAll();
-            this.CategoryDropDown.DataSource = categories;
-            this.CategoryDropDown.DataBind();
+            if (!Page.IsPostBack)
+            {
+                var categories = CategoryModelFactory.GetAll();
+                this.CategoryDropDown.DataSource = categories;
+                this.CategoryDropDown.DataBind();
+            }
         }
 
         public void CreateBook_Click(object sender, EventArgs e)
@@ -46,7 +49,6 @@ namespace EBooks.Web.Book
                 {
                     this.Picture.PostedFile.SaveAs(saveLocation);
                     newBook.ImageURL = saveLocation;
-                    author.Books.Add(newBook);
                     //Response.Write("The file has been uploaded.");
                 }
                 catch (Exception ex)
@@ -57,6 +59,7 @@ namespace EBooks.Web.Book
                     //production environments. It would be better just to put a generic error message. 
                 }
             }
+            author.Books.Add(newBook);
             this.db.Publishers.Add(publisher);
             this.db.Authors.Add(author);
             this.db.Books.Add(newBook);
