@@ -151,6 +151,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Author\Create.aspx" />
+    <Content Include="Author\Delete.aspx" />
     <Content Include="Author\Edit.aspx" />
     <Content Include="Author\Index.aspx" />
     <Content Include="Author\View.aspx" />
@@ -196,14 +197,9 @@
       <DependentUpon>BooksEntities.edmx</DependentUpon>
       <LastGenOutput>BooksEntities.cs</LastGenOutput>
     </Content>
-    <Content Include="Book\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Profille\Edit.aspx" />
     <Content Include="Profille\View.aspx" />
-    <Content Include="Publisher\Delete.aspx" />
-    <Content Include="Publisher\Edit.aspx" />
-    <Content Include="UserControls\ModifyPublisher.ascx" />
-    <Content Include="Publisher\Create.aspx" />
     <Content Include="Publisher\Default.aspx" />
     <Content Include="Publisher\View.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -288,6 +284,13 @@
     </Compile>
     <Compile Include="Author\Create.aspx.designer.cs">
       <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Author\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Author\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Author\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
@@ -501,34 +504,6 @@
       <DependentUpon>View.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Publisher\Delete.aspx.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Publisher\Delete.aspx.designer.cs">
-      <DependentUpon>Delete.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Publisher\Edit.aspx.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Publisher\Edit.aspx.designer.cs">
-      <DependentUpon>Edit.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\ModifyPublisher.ascx.cs">
-      <DependentUpon>ModifyPublisher.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControls\ModifyPublisher.ascx.designer.cs">
-      <DependentUpon>ModifyPublisher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Publisher\Create.aspx.cs">
-      <DependentUpon>Create.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Publisher\Create.aspx.designer.cs">
-      <DependentUpon>Create.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Publisher\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

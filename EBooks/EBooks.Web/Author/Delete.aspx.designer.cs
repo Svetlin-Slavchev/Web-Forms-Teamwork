@@ -10,25 +10,25 @@
 namespace EBooks.Web.Author {
     
     
-    public partial class Create {
+    public partial class Delete {
         
         /// <summary>
-        /// AuthorSearch control.
+        /// DeleteButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EBooks.Web.UserControls.AuthorSearch AuthorSearch;
+        protected global::System.Web.UI.WebControls.Button DeleteButton;
         
         /// <summary>
-        /// AuthorName control.
+        /// CancelButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AuthorName;
+        protected global::System.Web.UI.WebControls.Button CancelButton;
         
         /// <summary>
         /// HyperLink1 control.

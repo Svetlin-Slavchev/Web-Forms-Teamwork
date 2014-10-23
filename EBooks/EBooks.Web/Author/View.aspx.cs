@@ -13,14 +13,44 @@ namespace EBooks.Web.Author
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.BindData();
+        }
+
+        private void BindData()
+        {
+            // do not show edit and delete buttons if user is not in admin role
+            if (!UserModel.IsAdmin(Page.User.Identity.Name))
+            {
+                //this.BooksByAuthorGridView.Columns[2].Visible = false;
+                //this.BooksByAuthorGridView.Columns[3].Visible = false;
+            }
+
             string queryString = Request.QueryString["authorId"];
             AuthorModel model = AuthorModelFactory.GetModel(queryString);
-
+            
             this.AuthorName.Text = model.Name;
 
-            var allBooksFromAuthor = model.Books;
-            this.BooksByAuthorGridView.DataSource = allBooksFromAuthor;
+            var allBooksFromAuthor = BookModelFactory.GetAllBooksByAuthorId(model.Id);
+
+            if (allBooksFromAuthor.Count != 0)
+            {
+                this.BooksByAuthorGridView.DataSource = allBooksFromAuthor;
+            }
+            else
+            {
+                this.BooksByAuthorGridView.DataSource = new List<BookModel>() { 
+                    new BookModel(){ 
+                        Title = "No books from this author..."
+                    }
+                };
+            }
             this.BooksByAuthorGridView.DataBind();
+        }
+
+        protected void BooksByAuthorGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            this.BooksByAuthorGridView.PageIndex = e.NewPageIndex;
+            this.BindData();
         }
     }
 }

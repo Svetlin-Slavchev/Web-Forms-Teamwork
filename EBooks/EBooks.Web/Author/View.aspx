@@ -14,12 +14,23 @@
             </h2>
 
             <!-- This will be grid with all books in directory -->
-            <asp:GridView ID="BooksByAuthorGridView" runat="server" AutoGenerateColumns="false">
+            <asp:GridView ID="BooksByAuthorGridView" runat="server" AutoGenerateColumns="false"
+                        AllowPaging="true" PageSize="3"
+                        OnPageIndexChanging="BooksByAuthorGridView_PageIndexChanging"
+                        CssClass="table table-hover table-striped" GridLines="None">
                 <Columns>
                     <asp:HyperLinkField DataNavigateUrlFormatString="~/Book/View.aspx?bookId={0}"
                          DataNavigateUrlFields="Id" HeaderText="Book Name" DataTextField="Title" />
+                    <asp:BoundField HeaderText="ISBN" DataField="ISBN" />
+
+                    <asp:HyperLinkField DataNavigateUrlFormatString="~/Book/Edit.aspx?bookId={0}"
+                        DataNavigateUrlFields="Id" HeaderText="" Text="Edit" />
+                    <asp:HyperLinkField DataNavigateUrlFormatString="~/Book/Delete.aspx?bookId={0}"
+                        DataNavigateUrlFields="Id" HeaderText="" Text="Delete" />
                 </Columns>
+                <RowStyle CssClass="cursor-pointer" />
             </asp:GridView>
+
         </div>
     </div>
 </asp:Content>
