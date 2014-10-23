@@ -68,7 +68,9 @@
                                                 <ul class="dropdown-menu" role="menu">
                                                     <li><a runat="server" href="Category/Index.aspx">Categories</a></li>
                                                     <li><a runat="server" href="Author/Index.aspx">Authors</a></li>
-                                                    <li><a runat="server" href="Publisher/">Publishers</a></li>
+                                                    <li><a runat="server" href="Publisher/Index.aspx">Publishers</a></li>
+                                                    <li><a runat="server" href="Book/Index.aspx">Title</a></li>
+
                                                 </ul>
                                             </li>
 

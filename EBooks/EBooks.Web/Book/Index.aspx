@@ -1,4 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="EBooks.Web.Book.Index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" 
+    AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="EBooks.Web.Book.Index" %>
 
 <%@ Register Src="~/UserControls/BookSearch.ascx" TagPrefix="uc1" TagName="BookSearch" %>
 

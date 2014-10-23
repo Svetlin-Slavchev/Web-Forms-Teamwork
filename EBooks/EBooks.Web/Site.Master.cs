@@ -68,7 +68,10 @@ namespace EBooks.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!Roles.RoleExists("admin")){
+                Roles.CreateRole("admin");
+                Roles.AddUserToRole("Drago", "admin");
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
