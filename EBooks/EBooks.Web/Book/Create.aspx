@@ -29,7 +29,7 @@
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Author" CssClass="col-md-2 control-label">Author</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="Author" CssClass="form-control" />
+                <asp:DropDownList runat="server" ID="Author" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Author"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The author is required." />
             </div>
@@ -37,7 +37,7 @@
         <div class="form-group">
             <asp:Label runat="server" AssociatedControlID="Publisher" CssClass="col-md-2 control-label">Publisher</asp:Label>
             <div class="col-md-10">
-                <asp:TextBox runat="server" ID="Publisher" CssClass="form-control" />
+                <asp:DropDownList runat="server" ID="Publisher" CssClass="form-control" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Publisher"
                     CssClass="text-danger" Display="Dynamic" ErrorMessage="The publisher is required." />
             </div>
