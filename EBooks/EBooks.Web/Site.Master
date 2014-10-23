@@ -102,10 +102,13 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Main Content-->
             <div class="container body-content">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
+
             <hr />
             <footer>
                 <p>&copy; <%: DateTime.Now.Year %> - EBooks</p>
