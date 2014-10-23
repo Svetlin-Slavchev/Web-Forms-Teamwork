@@ -27,5 +27,11 @@ namespace EBooks.Web.Publishers
                 this.PublishersData.DataBind();
             }
         }
+
+        protected void PublishersData_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            this.PublishersData.PageIndex = e.NewPageIndex;
+            this.PublishersData.DataBind();
+        }
     }
 }

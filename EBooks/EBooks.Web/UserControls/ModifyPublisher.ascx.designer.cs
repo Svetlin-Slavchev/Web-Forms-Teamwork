@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EBooks.Web.UserControls{
+namespace EBooks.Web.UserControls {
     
     
     public partial class ModifyPublisher {
@@ -29,6 +29,15 @@ namespace EBooks.Web.UserControls{
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ModifyButton;
+        
+        /// <summary>
+        /// StatusPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StatusPanel;
         
         /// <summary>
         /// HyperLink1 control.

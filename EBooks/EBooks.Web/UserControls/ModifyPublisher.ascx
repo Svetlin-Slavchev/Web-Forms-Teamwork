@@ -16,6 +16,15 @@
             </div>
         </div>
 
-        <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Publisher" runat="server">Back</asp:HyperLink>
+        <asp:UpdatePanel runat="server" UpdateMode="Conditional" ChildrenAsTriggers="false">
+          <ContentTemplate>
+               <asp:Label ID="StatusPanel" runat="server" CssClass="alert alert-dismissable alert-danger" Visible="false" />
+          </ContentTemplate>
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="ModifyButton" />
+            </Triggers>
+        </asp:UpdatePanel>
+
+         <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Publisher/Index" runat="server">Back</asp:HyperLink>
     </div>
 </div>
