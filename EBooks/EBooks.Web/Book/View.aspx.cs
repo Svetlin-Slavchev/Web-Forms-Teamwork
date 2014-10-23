@@ -23,7 +23,7 @@ namespace EBooks.Web.Book
 
             this.ISBNContainer.InnerText = "ISBN: " + model.ISBN;
             this.PagesContainer.InnerText = "Pages: " + model.Pages.ToString();
-            this.YearContainer.InnerText = "Year: " + model.Year.ToString();
+            this.YearContainer.InnerText = string.Format("Year: {0}", model.Year == null ? "" : model.Year.Value.Year.ToString());
             this.DescriptionContainer.InnerText = "Description: " + model.Description;
 
             this.DownloadLink.NavigateUrl = model.DownloadURL;

@@ -15,9 +15,12 @@ namespace EBooks.Web.Book
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var categories = CategoryModelFactory.GetAll();
-            this.CategoryDropDown.DataSource = categories;
-            this.CategoryDropDown.DataBind();
+            if (!Page.IsPostBack)
+            {
+                var categories = CategoryModelFactory.GetAll();
+                this.CategoryDropDown.DataSource = categories;
+                this.CategoryDropDown.DataBind();
+            }
         }
 
         public void CreateBook_Click(object sender, EventArgs e)
@@ -35,9 +38,9 @@ namespace EBooks.Web.Book
             newBook.Description = this.Description.Text;
             newBook.Pages = int.Parse(this.Pages.Text);
             newBook.Year = DateTime.Parse(this.Year.Text);
-            var category = new Entities.Category();
-            category.Name = this.CategoryDropDown.SelectedIndex.ToString();
-            newBook.Category = category;
+            var categoryName = this.CategoryDropDown.SelectedValue;
+            var category = db.Categories.FirstOrDefault(c => c.Name == categoryName); 
+            newBook.CategoryId = category.Id;
             if ((this.Picture.PostedFile != null) && (this.Picture.PostedFile.ContentLength > 0))
             {
                 string fn = System.IO.Path.GetFileName(this.Picture.PostedFile.FileName);
@@ -45,8 +48,7 @@ namespace EBooks.Web.Book
                 try
                 {
                     this.Picture.PostedFile.SaveAs(saveLocation);
-                    newBook.ImageURL = saveLocation;
-                    author.Books.Add(newBook);
+                    newBook.ImageURL = "Pictures" + "\\" + fn;
                     //Response.Write("The file has been uploaded.");
                 }
                 catch (Exception ex)
@@ -57,6 +59,7 @@ namespace EBooks.Web.Book
                     //production environments. It would be better just to put a generic error message. 
                 }
             }
+            author.Books.Add(newBook);
             this.db.Publishers.Add(publisher);
             this.db.Authors.Add(author);
             this.db.Books.Add(newBook);

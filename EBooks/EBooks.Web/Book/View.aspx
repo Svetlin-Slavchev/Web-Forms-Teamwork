@@ -11,7 +11,7 @@
             <h1 id="BookTitle" runat="server"></h1>
             <h3 id ="BookSubTitle" runat="server"></h3>
 
-            <asp:Image ID="BookImage" runat="server" />
+            <asp:Image ID="BookImage" runat="server" class="img-responsive img-rounded"/>
 
             <div id="ISBNContainer" runat="server"></div>
             <div id="PagesContainer" runat="server"></div>
