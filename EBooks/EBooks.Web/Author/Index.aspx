@@ -22,7 +22,6 @@
                 OnPageIndexChanging="AuthorsGridView_PageIndexChanging"
                 CssClass="table table-hover table-striped" GridLines="None">
                 <Columns>
-                    <asp:BoundField HeaderText="" DataField="Id" />
                     <asp:HyperLinkField DataNavigateUrlFormatString="View.aspx?authorId={0}"
                          DataNavigateUrlFields="Id" HeaderText="Author Name" DataTextField="Name" />
                     <asp:HyperLinkField DataNavigateUrlFormatString="Edit.aspx?authorId={0}"

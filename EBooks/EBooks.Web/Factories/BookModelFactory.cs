@@ -58,6 +58,31 @@ namespace EBooks.Web.Factories
             return books;
         }
 
+
+        public static List<BookModel> GetAllBooksByAuthorId(int authorId)
+        {
+            var books = db.Books
+                    .Where(x => x.Authors.FirstOrDefault(a => a.Id == authorId).Id == authorId)
+                    .Select(x => new BookModel
+                    {
+                        Id = x.Id,
+                        Title = x.Title,
+                        SubTitle = x.SubTitle,
+                        Description = x.Description,
+                        ISBN = x.ISBN,
+                        Pages = x.Pages,
+                        Year = x.Year,
+                        PublisherId = x.PublisherId,
+                        ImageURL = x.ImageURL,
+                        DownloadURL = x.DownloadURL,
+                        UploaderId = x.UploaderUserId,
+                        CategoryId = x.CategoryId
+                    })
+                    .ToList();
+
+            return books;
+        }
+
         public static List<BookModel> GetAll()
         {
             var books = db.Books

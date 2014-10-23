@@ -21,8 +21,8 @@ namespace EBooks.Web.Author
             // do not show edit and delete buttons if user is not in admin role
             if (!UserModel.IsAdmin(Page.User.Identity.Name))
             {
-                //this.BooksByAuthorGridView.Columns[2].Visible = false;
-                //this.BooksByAuthorGridView.Columns[3].Visible = false;
+                this.BooksByAuthorGridView.Columns[2].Visible = false;
+                this.BooksByAuthorGridView.Columns[3].Visible = false;
             }
 
             string queryString = Request.QueryString["authorId"];
