@@ -48,7 +48,7 @@ namespace EBooks.Web.Book
                 try
                 {
                     this.Picture.PostedFile.SaveAs(saveLocation);
-                    newBook.ImageURL = saveLocation;
+                    newBook.ImageURL = "Pictures" + "\\" + fn;
                     //Response.Write("The file has been uploaded.");
                 }
                 catch (Exception ex)
