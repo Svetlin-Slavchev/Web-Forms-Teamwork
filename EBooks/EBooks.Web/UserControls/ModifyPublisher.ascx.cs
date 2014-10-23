@@ -96,7 +96,7 @@ namespace EBooks.Web.UserControls
             this.StatusPanel.Text = message;
             this.StatusPanel.CssClass = cssClass;
             this.StatusPanel.Visible = true;
+            this.ModificationForm.Visible = false;
         }
-
     }
 }
