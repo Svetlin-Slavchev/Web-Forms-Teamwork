@@ -5,21 +5,22 @@ using System.Linq;
 
 namespace EBooks.Web.Factories
 {
-    public class PublisherModelFactory
+    public static class PublisherModelFactory
     {
-        private static EBooksEntities db = new EBooksEntities();
-
         public static List<PublisherModel> GetAll()
         {
-            var publishers = db.Publishers
-                .Select(x => new PublisherModel
-                {
-                    Id = x.Id,
-                    Name = x.Name
-                })
-                .ToList();
+            using (var db = new EBooksEntities())
+            {
+                var publishers = db.Publishers
+                    .Select(x => new PublisherModel
+                    {
+                        Id = x.Id,
+                        Name = x.Name
+                    })
+                    .ToList();
 
-            return publishers;
+                return publishers;
+            }
         }
     }
 }
