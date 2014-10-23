@@ -10,8 +10,8 @@
         <div class="col-md-9">
             <asp:GridView runat="server" ID="PublishersData" AutoGenerateColumns="false">
                 <Columns>
-                    <asp:HyperLinkField HeaderText="Id" DataTextField="Id" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publishers/{0}" />
-                    <asp:HyperLinkField HeaderText="Name" DataTextField="Name" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publishers/{0}" />
+                    <asp:HyperLinkField HeaderText="Id" DataTextField="Id" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}" />
+                    <asp:HyperLinkField HeaderText="Name" DataTextField="Name" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}" />
                 </Columns>
             </asp:GridView>
 

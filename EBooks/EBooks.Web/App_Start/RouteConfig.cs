@@ -14,9 +14,13 @@ namespace EBooks.Web
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);
 
-            routes.MapPageRoute("",
-                    "Publishers/{id}",
-                    "~/Publishers/Default.aspx");
+            routes.MapPageRoute("Publisher",
+                    "Publisher/{id}",
+                    "~/Publisher/Default.aspx");
+
+            routes.MapPageRoute("ModifyPublisher",
+                "Publisher/{id}/{action}",
+                "~/Publisher/{action}.aspx");
 
         }
     }
