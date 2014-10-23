@@ -26,6 +26,6 @@
             <asp:AsyncPostBackTrigger ControlID="ModifyButton" />
         </Triggers>
     </asp:UpdatePanel>
-
+    <br /> <br />
     <asp:HyperLink CssClass="btn btn-primary" NavigateUrl="~/Publisher/Index" runat="server">Back</asp:HyperLink>
 </div>
