@@ -67,8 +67,8 @@ namespace EBooks.Web.Book
             }
            
             author.Books.Add(newBook);
-            this.db.Publishers.Add(publisher);
-            this.db.Authors.Add(author);
+            //this.db.Publishers.Add(publisher);
+            //this.db.Authors.Add(author);
             this.db.Books.Add(newBook);
             this.db.SaveChanges();
         }
