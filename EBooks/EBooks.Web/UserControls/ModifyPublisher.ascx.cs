@@ -29,7 +29,7 @@ namespace EBooks.Web.UserControls
                 this.Name.Enabled = false;
             }
 
-            if (!this.IsPostBack )
+            if (!this.IsPostBack)
             {
                 try
                 {
@@ -45,38 +45,56 @@ namespace EBooks.Web.UserControls
 
         protected void ModifyButton_Click(object sender, EventArgs e)
         {
-            string name = this.Name.Text;
-            int id = int.Parse(PublisherId);
+            try
+            {
+                string name = this.Name.Text;
+                int id = int.Parse(PublisherId);
 
-            using (var db = new EBooksEntities())
+                using (var db = new EBooksEntities())
+                {
+                    switch (this.Action)
+                    {
+                        case "Create":
+                            db.Publishers.Add(new Entities.Publisher { Name = name });
+                            break;
+                        case "Update":
+                            db.Publishers.Single(x => x.Id == id).Name = name;
+                            break;
+                        case "Delete":
+                            db.Publishers.Remove(db.Publishers.Single(x => x.Id == id));
+                            break;
+                        default:
+                            break;
+                    }
+                    db.SaveChanges();
+                    DisplayMessage("item succesfully updated", "success");
+                }
+            }
+            catch (Exception ex)
             {
                 switch (this.Action)
                 {
                     case "Create":
-                        db.Publishers.Add(new Entities.Publisher { Name = name });
-                        break;
+                        DisplayMessage("There was an error creating the item", "danger");
+                        return;
                     case "Update":
-                        db.Publishers.Single(x => x.Id == id).Name = name;
-                        break;
+                        DisplayMessage("There was an error while updating the item", "danger");
+                        return;
                     case "Delete":
-                        ResetPublishers(db, id);
-                        db.Publishers.Remove(db.Publishers.Single(x => x.Id == id));
-                        break;
+                        DisplayMessage("Error: unable to delete item, please check if any books are related to this Publisher and delete them first", "danger");
+                        return;
                     default:
                         break;
                 }
-                db.SaveChanges();
-                Response.Redirect("~/Publisher/");
             }
         }
 
-        private static void ResetPublishers(EBooksEntities db, int id)
+        protected void DisplayMessage(string message, string type)
         {
-            var books = db.Books.Where(x => x.PublisherId == id);
-            foreach (var book in books)
-            {
-                book.Publisher = null;
-            }
+            string cssClass = string.Format("alert alert-dismissable alert-{0}", type);
+            this.StatusPanel.Text = message;
+            this.StatusPanel.CssClass = cssClass;
+            this.StatusPanel.Visible = true;
         }
 
     }

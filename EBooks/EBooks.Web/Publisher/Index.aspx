@@ -9,6 +9,7 @@
         </div>
         <div class="col-md-9">
             <asp:GridView runat="server" ID="PublishersData" AutoGenerateColumns="false" AllowPaging="true" PageSize="10"
+                OnPageIndexChanging="PublishersData_PageIndexChanging"
                 CssClass="table table-hover table-striped" GridLines="None">
                 <Columns>
                     <asp:HyperLinkField HeaderText="Id" DataTextField="Id" DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Publisher/{0}" />
