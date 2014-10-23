@@ -21,6 +21,12 @@ namespace EBooks.Web.Book
                 var categories = CategoryModelFactory.GetAll();
                 this.CategoryDropDown.DataSource = categories;
                 this.CategoryDropDown.DataBind();
+
+                this.Author.DataSource = AuthorModelFactory.GetAll().Select(x => x.Name);
+                this.Author.DataBind();
+
+                this.Publisher.DataSource = PublisherModelFactory.GetAll().Select(x=>x.Name);
+                this.Publisher.DataBind();
             }
         }
 

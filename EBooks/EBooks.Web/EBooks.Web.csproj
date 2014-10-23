@@ -149,6 +149,7 @@
   <ItemGroup>
     <Content Include="Account\Forgot.aspx" />
     <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Author\Create.aspx" />
     <Content Include="Author\Delete.aspx" />
@@ -260,6 +261,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\Forgot.aspx.cs">
@@ -275,6 +277,13 @@
     </Compile>
     <Compile Include="Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

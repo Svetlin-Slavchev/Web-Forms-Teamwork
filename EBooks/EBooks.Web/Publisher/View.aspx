@@ -32,7 +32,7 @@
 
             <asp:UpdatePanel runat="server" ChildrenAsTriggers="false" UpdateMode="Conditional">
                 <ContentTemplate>
-                    <h2 runat="server" id="AdditionalInfoHeader" visible="false">Additional Information </h2>
+                    <h2 runat="server" id="AdditionalInfoHeader" visible="false"> Additional Information </h2>
                     <asp:DetailsView runat="server" ID="AdditionalBookData" CssClass="table table-hover table-striped" GridLines="None" />
                 </ContentTemplate>
                 <Triggers>

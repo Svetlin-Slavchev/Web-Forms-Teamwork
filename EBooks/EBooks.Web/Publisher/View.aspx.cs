@@ -42,6 +42,7 @@ namespace EBooks.Web.Publisher
 
                 this.AdditionalBookData.DataSource = new EBooks.Web.Entities.Book[] { book };
                 this.AdditionalBookData.DataBind();
+                this.AdditionalInfoHeader.InnerText = "Additional information for " + book.Title;
                 this.AdditionalInfoHeader.Visible = true;
             }
         }

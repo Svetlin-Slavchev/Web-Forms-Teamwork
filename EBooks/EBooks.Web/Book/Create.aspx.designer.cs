@@ -46,7 +46,7 @@ namespace EBooks.Web.Book {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Author;
+        protected global::System.Web.UI.WebControls.DropDownList Author;
         
         /// <summary>
         /// Publisher control.
@@ -55,7 +55,7 @@ namespace EBooks.Web.Book {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Publisher;
+        protected global::System.Web.UI.WebControls.DropDownList Publisher;
         
         /// <summary>
         /// Description control.
