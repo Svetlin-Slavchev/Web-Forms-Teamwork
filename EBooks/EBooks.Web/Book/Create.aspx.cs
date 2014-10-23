@@ -28,27 +28,48 @@ namespace EBooks.Web.Book
             var newBook = new Entities.Book();
             newBook.Title = this.BookTitle.Text;
             newBook.SubTitle = this.SubTitle.Text;
-            var author = new Entities.Author();
-            author.Name = this.Author.Text;
-            var publisher = new Entities.Publisher();
-            publisher.Name = this.Publisher.Text;
+            var authorName = this.Author.Text;
+            var author = db.Authors.FirstOrDefault(a => a.Name == authorName);
+            if (author==null)
+            {
+                author = new Entities.Author(authorName);
+                this.db.Authors.Add(author);
+            }
+            var publisherName = this.Publisher.Text;
+            var publisher = db.Publishers.FirstOrDefault(p => p.Name == publisherName);
+            if (publisher == null)
+            {
+                publisher = new Entities.Publisher(publisherName);
+                this.db.Publishers.Add(publisher);
+            }
+
             newBook.Authors.Add(author);
             newBook.Publisher = publisher;
             newBook.ISBN = this.ISBN.Text;
             newBook.Description = this.Description.Text;
-            newBook.Pages = int.Parse(this.Pages.Text);
-            newBook.Year = DateTime.Parse(this.Year.Text);
+            var pages = 0;
+            if (int.TryParse(this.Pages.Text,out pages))
+            {
+                newBook.Pages = pages;
+            }
+
+            var date = new DateTime();
+            if (DateTime.TryParse(this.Year.Text,out date))
+            {
+                newBook.Year = date;
+            }
+            
             var categoryName = this.CategoryDropDown.SelectedValue;
             var category = db.Categories.FirstOrDefault(c => c.Name == categoryName); 
             newBook.CategoryId = category.Id;
             if ((this.Picture.PostedFile != null) && (this.Picture.PostedFile.ContentLength > 0))
             {
-                string fn = System.IO.Path.GetFileName(this.Picture.PostedFile.FileName);
-                string saveLocation = Server.MapPath("Pictures") + "\\" + fn;
+                string fileName = System.IO.Path.GetFileName(this.Picture.PostedFile.FileName);
+                string saveLocation = Server.MapPath("Pictures") + "\\" + fileName;
                 try
                 {
                     this.Picture.PostedFile.SaveAs(saveLocation);
-                    newBook.ImageURL = "Pictures" + "\\" + fn;
+                    newBook.ImageURL = "Pictures" + "\\" + fileName;
                     //Response.Write("The file has been uploaded.");
                 }
                 catch (Exception ex)
@@ -60,8 +81,6 @@ namespace EBooks.Web.Book
                 }
             }
             author.Books.Add(newBook);
-            this.db.Publishers.Add(publisher);
-            this.db.Authors.Add(author);
             this.db.Books.Add(newBook);
             this.db.SaveChanges();
         }

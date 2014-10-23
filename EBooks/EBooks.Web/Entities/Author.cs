@@ -14,11 +14,16 @@ namespace EBooks.Web.Entities
     
     public partial class Author
     {
-        public Author()
+        public Author(string name)
         {
+            this.Name = name;
             this.Books = new HashSet<Book>();
         }
-    
+
+        public Author()
+        {
+        }
+
         public int Id { get; set; }
         public string Name { get; set; }
     

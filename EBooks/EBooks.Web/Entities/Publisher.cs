@@ -14,9 +14,14 @@ namespace EBooks.Web.Entities
     
     public partial class Publisher
     {
+        public Publisher(string name)
+        {
+            this.Name = name;
+            this.Books = new HashSet<Book>();
+        }
+
         public Publisher()
         {
-            this.Books = new HashSet<Book>();
         }
     
         public int Id { get; set; }
