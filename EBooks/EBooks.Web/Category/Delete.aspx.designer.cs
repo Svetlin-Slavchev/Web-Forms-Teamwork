@@ -13,6 +13,15 @@ namespace EBooks.Web.Category {
     public partial class Delete {
         
         /// <summary>
+        /// CategoryName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox CategoryName;
+        
+        /// <summary>
         /// DeleteButton control.
         /// </summary>
         /// <remarks>

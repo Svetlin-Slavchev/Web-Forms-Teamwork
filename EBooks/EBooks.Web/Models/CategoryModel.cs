@@ -54,14 +54,21 @@ namespace EBooks.Web.Models
             db.SaveChanges();
         }
 
-        internal void Delete()
+        internal bool Delete()
         {
             Entities.Category category = db.Categories
                 .Where(x => x.Id == this.Id)
                 .FirstOrDefault();
 
-            db.Categories.Remove(category);
-            db.SaveChanges();
+            var booksInCategory = db.Books.Where(b => b.CategoryId == category.Id);
+            if (booksInCategory.Count() == 0)
+            {
+                db.Categories.Remove(category);
+                db.SaveChanges();
+                return true;
+            }
+
+            return false;
         }
     }
 }
