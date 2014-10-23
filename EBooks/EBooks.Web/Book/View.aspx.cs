@@ -26,8 +26,8 @@ namespace EBooks.Web.Book
             this.YearContainer.InnerText = string.Format("Year: {0}", model.Year == null ? "" : model.Year.Value.Year.ToString());
             this.DescriptionContainer.InnerText = "Description: " + model.Description;
 
-            this.DownloadLink.NavigateUrl = model.DownloadURL;
-            this.DownloadLink.Text = model.DownloadURL;
+            this.DownloadLink.NavigateUrl = model.ImageURL;
+            this.DownloadLink.Text = "DOWNLOAD";
 
             this.DataBind();
         }
