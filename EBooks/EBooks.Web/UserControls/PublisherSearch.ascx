@@ -11,7 +11,7 @@
         <ul id="search_list" class="nav nav-list tree">
             <% foreach (PublisherModel publisher in this.AllPublishers)
                { %>
-            <% var href = "../Publisher/View.aspx?publiherId=" + publisher.Id; %>
+            <% var href = "../Publisher/" + publisher.Id; %>
             <li>
                 <a href='<%= href %>'><%= publisher.Name %></a>
             </li>
