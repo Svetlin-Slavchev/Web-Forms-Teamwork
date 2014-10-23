@@ -1,4 +1,5 @@
 ﻿using EBooks.Web.Entities;
+using EBooks.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,12 +27,18 @@ namespace EBooks.Web.Publishers
                 this.PublishersData.DataSource = db.Publishers.ToList();
                 this.PublishersData.DataBind();
             }
+
+            if (!UserModel.IsAdmin(Page.User.Identity.Name))
+            {
+                this.PublishersData.Columns[2].Visible = false;
+                this.PublishersData.Columns[3].Visible = false;
+            }
         }
 
         protected void PublishersData_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             this.PublishersData.PageIndex = e.NewPageIndex;
-            this.PublishersData.DataBind();
+            LoadData();
         }
     }
 }

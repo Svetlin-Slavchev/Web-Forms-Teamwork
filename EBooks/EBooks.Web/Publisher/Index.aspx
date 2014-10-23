@@ -8,7 +8,7 @@
             <uc1:PublisherSearch runat="server" ID="PublisherSearch" />
         </div>
         <div class="col-md-9">
-            <asp:GridView runat="server" ID="PublishersData" AutoGenerateColumns="false" AllowPaging="true" PageSize="10"
+            <asp:GridView runat="server" ID="PublishersData" AutoGenerateColumns="false" AllowPaging="true" PageSize="5"
                 OnPageIndexChanging="PublishersData_PageIndexChanging"
                 CssClass="table table-hover table-striped" GridLines="None">
                 <Columns>
