@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using EBooks.Web.Models;
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace EBooks.Web.Category
 {
-    public partial class Create : System.Web.UI.Page
+    public partial class Create : Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void CreateButton_Click(object sender, EventArgs e)
         {
+            CategoryModel.Create(this.CategoryName.Text);
 
+            Response.Redirect("Index.aspx?successMessage=Category created!");
         }
     }
 }

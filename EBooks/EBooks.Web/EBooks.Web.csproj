@@ -165,6 +165,7 @@
     <Content Include="Book\Index.aspx" />
     <Content Include="Book\View.aspx" />
     <Content Include="Category\Create.aspx" />
+    <Content Include="Category\Delete.aspx" />
     <Content Include="Category\Edit.aspx" />
     <Content Include="Category\Index.aspx" />
     <Content Include="Category\View.aspx" />
@@ -233,8 +234,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
-    <Content Include="UserControls\BookSearch.ascx" />
     <Content Include="UserControls\AuthorSearch.ascx" />
+    <Content Include="UserControls\BookSearch.ascx" />
     <Content Include="UserControls\CategorySearch.ascx" />
     <Content Include="UserControls\PublisherSearch.ascx" />
     <Content Include="ViewSwitcher.ascx" />
@@ -337,6 +338,13 @@
     </Compile>
     <Compile Include="Category\Create.aspx.designer.cs">
       <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Category\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Category\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Category\Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
@@ -515,19 +523,19 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\BookSearch.ascx.cs">
-      <DependentUpon>BookSearch.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserControls\BookSearch.ascx.designer.cs">
-      <DependentUpon>BookSearch.ascx</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\AuthorSearch.ascx.cs">
       <DependentUpon>AuthorSearch.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserControls\AuthorSearch.ascx.designer.cs">
       <DependentUpon>AuthorSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BookSearch.ascx.cs">
+      <DependentUpon>BookSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BookSearch.ascx.designer.cs">
+      <DependentUpon>BookSearch.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CategorySearch.ascx.cs">
       <DependentUpon>CategorySearch.ascx</DependentUpon>

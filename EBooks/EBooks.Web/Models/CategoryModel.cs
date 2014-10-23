@@ -31,5 +31,37 @@ namespace EBooks.Web.Models
                 this.Books = BookModelFactory.GetAllBooksByCategory(this.Id);
             }
         }
+
+        internal static void Create(string name)
+        {
+            Entities.Category newCategory = new Entities.Category()
+                {
+                    Name = name
+                };
+
+            db.Categories.Add(newCategory);
+            db.SaveChanges();
+        }
+
+        internal void Update(string name)
+        {
+            Entities.Category category = db.Categories
+                .Where(x => x.Id == this.Id)
+                .FirstOrDefault();
+
+            category.Name = name;
+
+            db.SaveChanges();
+        }
+
+        internal void Delete()
+        {
+            Entities.Category category = db.Categories
+                .Where(x => x.Id == this.Id)
+                .FirstOrDefault();
+
+            db.Categories.Remove(category);
+            db.SaveChanges();
+        }
     }
 }

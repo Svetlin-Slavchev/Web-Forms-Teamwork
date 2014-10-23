@@ -10,25 +10,25 @@
 namespace EBooks.Web.Category {
     
     
-    public partial class Create {
+    public partial class Delete {
         
         /// <summary>
-        /// CategorySearch control.
+        /// DeleteButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EBooks.Web.UserControls.CategorySearch CategorySearch;
+        protected global::System.Web.UI.WebControls.Button DeleteButton;
         
         /// <summary>
-        /// CategoryName control.
+        /// CancelButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CategoryName;
+        protected global::System.Web.UI.WebControls.Button CancelButton;
         
         /// <summary>
         /// HyperLink1 control.
