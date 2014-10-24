@@ -5,61 +5,57 @@
     <div class="form-group">
         <asp:Label runat="server" AssociatedControlID="BookTitle" CssClass="col-md-2 control-label">Title</asp:Label>
         <div class="col-md-10">
-            <asp:TextBox runat="server" ID="BookTitle" CssClass="form-control" />
-            <asp:RequiredFieldValidator runat="server" ControlToValidate="BookTitle"
-                CssClass="text-danger" Display="Dynamic" ErrorMessage="The title is required." />
+            <asp:TextBox runat="server" ID="BookTitle" CssClass="form-control" readonly="true"/>
         </div>
     </div>
     <div class="form-group">
         <asp:Label runat="server" AssociatedControlID="SubTitle" CssClass="col-md-2 control-label">SubTitle</asp:Label>
         <div class="col-md-10">
-            <asp:TextBox runat="server" ID="SubTitle" CssClass="form-control" />
+            <asp:TextBox runat="server" ID="SubTitle" CssClass="form-control" readonly="true"/>
         </div>
     </div>
     <div class="form-group">
         <asp:Label runat="server" AssociatedControlID="Author" CssClass="col-md-2 control-label">Author</asp:Label>
         <div class="col-md-10">
-            <asp:TextBox runat="server" ID="Author" CssClass="form-control" />
-            <asp:RequiredFieldValidator runat="server" ControlToValidate="Author"
-                CssClass="text-danger" Display="Dynamic" ErrorMessage="The author is required." />
+            <asp:TextBox runat="server" ID="Author" CssClass="form-control" readonly="true"/>
+            
         </div>
     </div>
     <div class="form-group">
         <asp:Label runat="server" AssociatedControlID="Publisher" CssClass="col-md-2 control-label">Publisher</asp:Label>
         <div class="col-md-10">
-            <asp:TextBox runat="server" ID="Publisher" CssClass="form-control" />
-            <asp:RequiredFieldValidator runat="server" ControlToValidate="Publisher"
-                CssClass="text-danger" Display="Dynamic" ErrorMessage="The publisher is required." />
+            <asp:TextBox runat="server" ID="Publisher" CssClass="form-control" readonly="true"/>
+            
         </div>
     </div>
     <div class="form-group">
         <asp:Label runat="server" AssociatedControlID="Description" CssClass="col-md-2 control-label">Description</asp:Label>
         <div class="col-md-10">
-            <asp:TextBox runat="server" ID="Description" CssClass="form-control" />
+            <asp:TextBox runat="server" ID="Description" CssClass="form-control" readonly="true"/>
         </div>
     </div>
     <div class="form-group">
         <asp:Label runat="server" AssociatedControlID="Pages" CssClass="col-md-2 control-label">Pages</asp:Label>
         <div class="col-md-10">
-            <asp:TextBox runat="server" ID="Pages" CssClass="form-control" />
+            <asp:TextBox runat="server" ID="Pages" CssClass="form-control" readonly="true"/>
         </div>
     </div>
     <div class="form-group">
         <asp:Label runat="server" AssociatedControlID="Year" CssClass="col-md-2 control-label">Year</asp:Label>
         <div class="col-md-10">
-            <asp:TextBox runat="server" ID="Year" CssClass="form-control" />
+            <asp:TextBox runat="server" ID="Year" CssClass="form-control" readonly="true"/>
         </div>
     </div>
     <div class="form-group">
         <asp:Label runat="server" AssociatedControlID="ISBN" CssClass="col-md-2 control-label">ISBN</asp:Label>
         <div class="col-md-10">
-            <asp:TextBox runat="server" ID="ISBN" CssClass="form-control" />
+            <asp:TextBox runat="server" ID="ISBN" CssClass="form-control" readonly="true"/>
         </div>
     </div>
     <div class="form-group">
-        <asp:Label runat="server" AssociatedControlID="CategoryDropDown" CssClass="col-md-2 control-label">Category</asp:Label>
+        <asp:Label runat="server" AssociatedControlID="Category" CssClass="col-md-2 control-label">Category</asp:Label>
         <div class="col-md-10">
-            <asp:DropDownList runat="server" ID="CategoryDropDown" DataTextField="Name"></asp:DropDownList>
+            <asp:TextBox runat="server" ID="Category" CssClass="form-control" readonly="true"></asp:TextBox>
         </div>
     </div>
     <asp:Button ID="DeleteButton" runat="server" Text="Delete" CssClass="btn btn-primary" OnClick="DeleteButton_Click" />

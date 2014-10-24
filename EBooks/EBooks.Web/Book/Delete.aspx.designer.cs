@@ -85,13 +85,13 @@ namespace EBooks.Web.Book {
         protected global::System.Web.UI.WebControls.TextBox ISBN;
         
         /// <summary>
-        /// CategoryDropDown control.
+        /// Category control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CategoryDropDown;
+        protected global::System.Web.UI.WebControls.TextBox Category;
         
         /// <summary>
         /// DeleteButton control.

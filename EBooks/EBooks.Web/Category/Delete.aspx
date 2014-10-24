@@ -1,15 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Delete.aspx.cs" Inherits="EBooks.Web.Category.Delete" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h3>Are you shure that you want to delete this?</h3>
+    <h3>Are you shure that you want to delete this category?</h3>
     <div>
         <div class="row">
             <div class="form-group">
                 <asp:Label runat="server" AssociatedControlID="CategoryName" CssClass="col-md-2 control-label">CategoryName</asp:Label>
                 <div class="col-md-10">
-                    <asp:TextBox runat="server" ID="CategoryName" CssClass="form-control" />
-                    <asp:RequiredFieldValidator runat="server" ControlToValidate="CategoryName"
-                        CssClass="text-danger" ErrorMessage="The user name field is required." />
+                    <asp:TextBox runat="server" ID="CategoryName" CssClass="form-control" readonly="true"/>
                 </div>
             </div>
         </div>

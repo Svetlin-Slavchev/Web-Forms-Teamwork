@@ -1,4 +1,5 @@
-﻿using EBooks.Web.Models;
+﻿using EBooks.Web.Factories;
+using EBooks.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,15 @@ namespace EBooks.Web.Author
 {
     public partial class Delete : System.Web.UI.Page
     {
+        protected void Page_Load()
+        {
+            if (!Page.IsPostBack)
+            {
+                string queryString = Request.QueryString["authorId"];
+                this.AuthorName.Text = AuthorModelFactory.GetModel(queryString).Name;
+            }
+        }
+
         protected void DeleteButton_Click(object sender, EventArgs e)
         {
             int id;

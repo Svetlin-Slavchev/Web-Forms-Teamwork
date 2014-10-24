@@ -31,10 +31,7 @@ namespace EBooks.Web.Book
                 this.Pages.Text = model.Pages.ToString();
                 this.Year.Text = model.Year == null ? "" : model.Year.Value.ToString("mm/dd/yyyy");
                 var category = db.Categories.FirstOrDefault(c => c.Id == model.CategoryId);
-                var categories = CategoryModelFactory.GetAll();
-                this.CategoryDropDown.DataSource = categories;
-                this.CategoryDropDown.DataBind();
-                this.CategoryDropDown.SelectedValue = category.Name;
+                this.Category.Text = category.Name;
             }
         }
 
