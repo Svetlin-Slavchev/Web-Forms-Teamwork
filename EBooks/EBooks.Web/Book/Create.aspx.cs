@@ -25,7 +25,7 @@ namespace EBooks.Web.Book
                 this.Author.DataSource = AuthorModelFactory.GetAll().Select(x => x.Name);
                 this.Author.DataBind();
 
-                this.Publisher.DataSource = PublisherModelFactory.GetAll().Select(x=>x.Name);
+                this.Publisher.DataSource = PublisherModelFactory.GetAll().Select(x => x.Name);
                 this.Publisher.DataBind();
             }
         }
@@ -37,7 +37,7 @@ namespace EBooks.Web.Book
             newBook.SubTitle = this.SubTitle.Text;
             var authorName = this.Author.Text;
             var author = db.Authors.FirstOrDefault(a => a.Name == authorName);
-            if (author==null)
+            if (author == null)
             {
                 author = new Entities.Author(authorName);
                 this.db.Authors.Add(author);
@@ -55,19 +55,19 @@ namespace EBooks.Web.Book
             newBook.ISBN = this.ISBN.Text;
             newBook.Description = this.Description.Text;
             var pages = 0;
-            if (int.TryParse(this.Pages.Text,out pages))
+            if (int.TryParse(this.Pages.Text, out pages))
             {
                 newBook.Pages = pages;
             }
 
             var date = new DateTime();
-            if (DateTime.TryParse(this.Year.Text,out date))
+            if (DateTime.TryParse(this.Year.Text, out date))
             {
                 newBook.Year = date;
             }
-            
+
             var categoryName = this.CategoryDropDown.SelectedValue;
-            var category = db.Categories.FirstOrDefault(c => c.Name == categoryName); 
+            var category = db.Categories.FirstOrDefault(c => c.Name == categoryName);
             newBook.CategoryId = category.Id;
             if ((this.Content.PostedFile != null) && (this.Content.PostedFile.ContentLength > 0))
             {
@@ -91,24 +91,15 @@ namespace EBooks.Web.Book
                     //production environments. It would be better just to put a generic error message. 
                 }
             }
+
             if ((this.Picture.PostedFile != null) && (this.Picture.PostedFile.ContentLength > 0))
             {
-                string fileName = System.IO.Path.GetFileName(this.Picture.PostedFile.FileName);
-                string saveLocation = Server.MapPath("Pictures") + "\\" + fileName;
-                try
-                {
-                    this.Picture.PostedFile.SaveAs(saveLocation);
-                    newBook.ImageURL = "Pictures" + "\\" + fileName;
-                    //Response.Write("The file has been uploaded.");
-                }
-                catch (Exception ex)
-                {
-                    Response.Write("Error: " + ex.Message);
-                    //Note: Exception.Message returns detailed message that describes the current exception. 
-                    //For security reasons, we do not recommend you return Exception.Message to end users in 
-                    //production environments. It would be better just to put a generic error message. 
-                }
+                string filename = Path.GetFileName(Picture.FileName);
+                Picture.SaveAs(Server.MapPath("~/Pictures/") + filename);
+
+                newBook.ImageURL = "~/Pictures" + "/" + filename;
             }
+
             author.Books.Add(newBook);
             this.db.Books.Add(newBook);
             this.db.SaveChanges();

@@ -16,7 +16,7 @@ namespace EBooks.Web.Book
             string queryString = Request.QueryString["bookId"];
             BookModel model = BookModelFactory.GetBookById(Int32.Parse(queryString)); //AuthorModelFactory.GetModel(queryString);
 
-            this.BookTitle.InnerText = "Title: " + model.Title;
+            this.BookTitle.InnerText = model.Title;
             this.BookSubTitle.InnerText = "Sub Title: " + model.SubTitle;
 
             this.BookImage.ImageUrl = model.ImageURL;

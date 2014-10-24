@@ -3,6 +3,7 @@ using EBooks.Web.Factories;
 using EBooks.Web.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -87,21 +88,10 @@ namespace EBooks.Web.Book
                 existingBook.CategoryId = category.Id;
                 if ((this.Picture.PostedFile != null) && (this.Picture.PostedFile.ContentLength > 0))
                 {
-                    string fileName = System.IO.Path.GetFileName(this.Picture.PostedFile.FileName);
-                    string saveLocation = Server.MapPath("Pictures") + "\\" + fileName;
-                    try
-                    {
-                        this.Picture.PostedFile.SaveAs(saveLocation);
-                        existingBook.ImageURL = "Pictures" + "\\" + fileName;
-                        //Response.Write("The file has been uploaded.");
-                    }
-                    catch (Exception ex)
-                    {
-                        Response.Write("Error: " + ex.Message);
-                        //Note: Exception.Message returns detailed message that describes the current exception. 
-                        //For security reasons, we do not recommend you return Exception.Message to end users in 
-                        //production environments. It would be better just to put a generic error message. 
-                    }
+                    string filename = Path.GetFileName(Picture.FileName);
+                    Picture.SaveAs(Server.MapPath("~/Pictures/") + filename);
+
+                    existingBook.ImageURL = "~/Pictures" + "/" + filename;
                 }
                 oldAuthor.Books.Remove(existingBook);
                 author.Books.Add(existingBook);
@@ -114,7 +104,5 @@ namespace EBooks.Web.Book
             }
 
         }
-
-
     }
 }
