@@ -80,6 +80,7 @@
                         <asp:Button runat="server" OnClick="EditBook_Click" Text="Edit book" CssClass="btn btn-primary" />
                     </div>
                 </div>
+                <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Book/Index.aspx" runat="server">Back</asp:HyperLink>
             </div>
         </div>
     </div>
