@@ -44,7 +44,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <a runat="server" href="~/">
-                            <img runat="server" src="~/Content/Images/Ebooks.jpg" height="180" width="180" />
+                            <img runat="server" title="Home" src="~/Content/Images/Ebooks.jpg" height="180" width="180" />
                         </a>
                     </div>
                     <div class="col-md-9">
